@@ -634,6 +634,7 @@ footer{padding-block:clamp(80px,9vw,130px) 40px!important}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}.hero-media .pic{animation:none!important}}
 .pl.rev{border-top:0!important;padding-top:0!important;min-height:0!important}
+@media (max-width:700px){.hero-media{aspect-ratio:4/5!important}.hero h1.big{font-size:clamp(56px,15vw,88px)}}
 </style>
 </head>
 <body>
@@ -1090,19 +1091,19 @@ const FX_DATE = 'fixed planning rate';
 
 /* status: 'ok' = confirmed by you · 'ph' = placeholder · 'vf' = public info to verify */
 const VILLAS = [
-  { id:'mawi-one', glyph:'sun', guests:2, photos:['canopy','tub','bed','soap','glow','loungers','chair'],
+  { id:'mawi-one', glyph:'sun', guests:2, photos:['canopy','tub','soap','glow','loungers'],
     for:{en:'For two',de:'Für zwei',nl:'Voor twee'},
     text:{en:'The couples\' villa. A house for two, with your own pool and braai.',
           de:'Die Villa für Paare. Ein Haus für zwei, mit eigenem Pool und Braai.',
           nl:'De villa voor stellen. Een huis voor twee, met je eigen zwembad en braai.'},
     bedrooms:'–', beds:{en:'To confirm',de:'Folgt',nl:'Volgt'}, baths:'–' },
-  { id:'mawi-two', glyph:'river', guests:4, photos:['lounge','veranda','pool','bottles','bath','lamps','tentcorner'],
+  { id:'mawi-two', glyph:'river', guests:4, photos:['lounge','veranda','pool','bottles','lamps'],
     for:{en:'For four',de:'Für vier',nl:'Voor vier'},
     text:{en:'Room for a family or two couples, with your own pool and braai.',
           de:'Platz für eine Familie oder zwei Paare, mit eigenem Pool und Braai.',
           nl:'Ruimte voor een gezin of twee stellen, met je eigen zwembad en braai.'},
     bedrooms:'–', beds:{en:'To confirm',de:'Folgt',nl:'Volgt'}, baths:'–' },
-  { id:'mawi-three', glyph:'branch', guests:6, photos:['pooltrees','room','tent','wood','soap','lounge','veranda'],
+  { id:'mawi-three', glyph:'branch', guests:6, photos:['pooltrees','room','tent','wood','chair'],
     for:{en:'For six',de:'Für sechs',nl:'Voor zes'},
     text:{en:'The big house, for friends and families who want to share the evenings, with your own pool and braai.',
           de:'Das große Haus, für Freunde und Familien, die die Abende teilen möchten, mit eigenem Pool und Braai.',
