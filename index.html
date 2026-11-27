@@ -144,6 +144,8 @@ nav a.nl:hover,nav a.nl.on{background-size:calc(100% - .2em) 1.5px}
 .p-glow{background-image:url(img/mood/tent-sunset.jpg)}
 .p-wood{background-image:url(img/mood/bathroom.jpg)}
 .p-tub{background-image:url(img/mood/tub.jpg)}
+.p-soap{background-image:url(img/mood/soap.jpg)}
+.p-bottles{background-image:url(img/mood/bottles.jpg)}
 
 
 /* villas list */
@@ -538,6 +540,7 @@ nav.top .menu-btn{color:#F7F1E6}
 body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opacity:.06;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .draftbar,.marks-toggle{display:none!important}
 .gallery{grid-auto-flow:dense}
+@media (min-width:701px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery .pic{aspect-ratio:4/5}.gallery .pic.wide{grid-column:span 2;aspect-ratio:auto}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -712,6 +715,10 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opa
       <div class="pic p-pool" role="img" aria-label="Private pool at sunset" data-lb="pool"></div>
       <div class="pic p-tent wide" role="img" aria-label="Open suite onto a wooden deck" data-lb="tent"></div>
       <div class="pic p-tub" role="img" aria-label="Bath with wooden shutters" data-lb="tub"></div>
+      <div class="pic p-bottles" role="img" aria-label="Mawi Villas shampoo, conditioner and body wash in the shower" data-lb="bottles"></div>
+      <div class="pic p-soap" role="img" aria-label="Mawi Villas soap on a stone dish" data-lb="soap"></div>
+      <div class="pic p-loungers" role="img" aria-label="Loungers on the deck at dusk" data-lb="loungers"></div>
+      <div class="pic p-lamps" role="img" aria-label="Bed with woven lamps" data-lb="lamps"></div>
     </div>
     <p class="small" style="margin-top:12px;opacity:.6" data-i="mood">Mood image · our interiors are in progress</p>
     <div class="std">
@@ -991,19 +998,19 @@ const FX_DATE = 'fixed planning rate';
 
 /* status: 'ok' = confirmed by you · 'ph' = placeholder · 'vf' = public info to verify */
 const VILLAS = [
-  { id:'mawi-one', glyph:'sun', guests:2, photos:['canopy','tub','bed','glow','loungers','chair'],
+  { id:'mawi-one', glyph:'sun', guests:2, photos:['canopy','tub','bed','soap','glow','loungers','chair'],
     for:{en:'For two',de:'Für zwei',nl:'Voor twee'},
     text:{en:'The couples\' villa. A house for two, with your own pool and braai.',
           de:'Die Villa für Paare. Ein Haus für zwei, mit eigenem Pool und Braai.',
           nl:'De villa voor stellen. Een huis voor twee, met je eigen zwembad en braai.'},
     bedrooms:'–', beds:{en:'To confirm',de:'Folgt',nl:'Volgt'}, baths:'–' },
-  { id:'mawi-two', glyph:'river', guests:4, photos:['lounge','veranda','pool','bath','lamps','tentcorner'],
+  { id:'mawi-two', glyph:'river', guests:4, photos:['lounge','veranda','pool','bottles','bath','lamps','tentcorner'],
     for:{en:'For four',de:'Für vier',nl:'Voor vier'},
     text:{en:'Room for a family or two couples, with your own pool and braai.',
           de:'Platz für eine Familie oder zwei Paare, mit eigenem Pool und Braai.',
           nl:'Ruimte voor een gezin of twee stellen, met je eigen zwembad en braai.'},
     bedrooms:'–', beds:{en:'To confirm',de:'Folgt',nl:'Volgt'}, baths:'–' },
-  { id:'mawi-three', glyph:'branch', guests:6, photos:['pooltrees','room','tent','wood','lounge','veranda'],
+  { id:'mawi-three', glyph:'branch', guests:6, photos:['pooltrees','room','tent','wood','soap','lounge','veranda'],
     for:{en:'For six',de:'Für sechs',nl:'Voor zes'},
     text:{en:'The big house, for friends and families who want to share the evenings, with your own pool and braai.',
           de:'Das große Haus, für Freunde und Familien, die die Abende teilen möchten, mit eigenem Pool und Braai.',
@@ -1022,7 +1029,7 @@ const INCLUDED = [
   {en:'Digital house guide',de:'Digitaler Hausführer',nl:'Digitale huisgids'},
   {en:'Alarm linked to a security company',de:'Alarmanlage mit Sicherheitsdienst',nl:'Alarm gekoppeld aan beveiliging'}
 ];
-const PHOTO_ALT = {pool:'Private pool at sunset',pooltrees:'Pool beneath the trees',loungers:'Loungers on the deck at dusk',tent:'Open suite onto a wooden deck',tentcorner:'Cane chairs by an open door',lamps:'Bed with woven lamps',glow:'Golden light through linen curtains',wood:'Bathroom in dark wood',tub:'Bath with wooden shutters',room:'Open-plan villa interior',canopy:'Canopy bed',lounge:'Lounge in warm light',veranda:'Living room opening onto a veranda over the bush',bed:'Bedroom with framed prints',bath:'Freestanding bath by the windows',chair:'Cane armchair before a bush mural'};
+const PHOTO_ALT = {soap:'Mawi Villas soap on a stone dish',bottles:'Mawi Villas shampoo, conditioner and body wash in the shower',pool:'Private pool at sunset',pooltrees:'Pool beneath the trees',loungers:'Loungers on the deck at dusk',tent:'Open suite onto a wooden deck',tentcorner:'Cane chairs by an open door',lamps:'Bed with woven lamps',glow:'Golden light through linen curtains',wood:'Bathroom in dark wood',tub:'Bath with wooden shutters',room:'Open-plan villa interior',canopy:'Canopy bed',lounge:'Lounge in warm light',veranda:'Living room opening onto a veranda over the bush',bed:'Bedroom with framed prints',bath:'Freestanding bath by the windows',chair:'Cane armchair before a bush mural'};
 
 /* Guide: add tips by copying a line. photo = one of the photo names above, or '' for a drawn mark. */
 const GUIDE = {
@@ -1248,7 +1255,7 @@ const MENU=[
   {href:'#mawi-two',pic:'lounge',t:{en:'Mawi Two'},d:{en:'For four',de:'Für vier',nl:'Voor vier'}},
   {href:'#mawi-three',pic:'veranda',t:{en:'Mawi Three'},d:{en:'For six',de:'Für sechs',nl:'Voor zes'}},
   {href:'#villas',pic:'room',t:{en:'All villas',de:'Alle Villen',nl:'Alle villa\'s'},d:{en:'The three houses side by side',de:'Die drei Häuser im Überblick',nl:'De drie huizen naast elkaar'}},
-  {href:'#stay',pic:'bed',t:{en:'In every villa',de:'In jeder Villa',nl:'In elke villa'},d:{en:'Pool, solar power, braai, self check-in',de:'Pool, Solarstrom, Braai, Self-Check-in',nl:'Zwembad, zonne-energie, braai, zelf inchecken'}},
+  {href:'#stay',pic:'bottles',t:{en:'In every villa',de:'In jeder Villa',nl:'In elke villa'},d:{en:'Pool, solar power, braai, self check-in',de:'Pool, Solarstrom, Braai, Self-Check-in',nl:'Zwembad, zonne-energie, braai, zelf inchecken'}},
   {href:'#book',pic:'loungers',t:{en:'Rates & booking',de:'Preise & Buchung',nl:'Prijzen & boeken'},d:{en:'Rates, seasons and availability',de:'Preise, Saisons und Verfügbarkeit',nl:'Prijzen, seizoenen en beschikbaarheid'}}
  ]},
  {key:'explore',intro:{en:'A bush village on the Crocodile River, with Kruger across the water.',de:'Ein Buschdorf am Crocodile River, mit dem Kruger auf der anderen Seite.',nl:'Een bushdorp aan de Crocodile River, met Kruger aan de overkant.'},label:{en:'Explore',de:'Entdecken',nl:'Ontdekken'},items:[
@@ -1475,7 +1482,7 @@ $('copyMail').addEventListener('click',function(){const b=this,el=$('mailAddr');
 const order=['acacia','sun','mark','river','spark','branch'];
 let items='';for(let i=0;i<18;i++){const k=order[i%6];items+=k==='mark'?'<span class="lg lg-mark"></span>':`<svg viewBox="0 0 100 100"><use href="#g-${k}"/></svg>`}
 
-$('igstrip').innerHTML=['pool','canopy','lounge','tub','chair','tent','glow'].map(p=>`<a href="https://www.instagram.com/mawivillas" target="_blank" rel="noopener" aria-label="Instagram"><div class="pic p-${p}"></div></a>`).join('');
+$('igstrip').innerHTML=['pool','bottles','canopy','lounge','soap','tent','glow'].map(p=>`<a href="https://www.instagram.com/mawivillas" target="_blank" rel="noopener" aria-label="Instagram"><div class="pic p-${p}"></div></a>`).join('');
 
 /* hero video */
 if(HERO_VIDEO){const v=$('heroVideo');v.src=HERO_VIDEO;v.hidden=false;v.play&&v.play().catch(()=>{})}
