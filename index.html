@@ -3,97 +3,587 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>MAWI Villas — Marloth Park · Opening 2027</title>
-<meta name="description" content="Three private self-catering villas in Marloth Park, on the southern border of Kruger National Park. Opening in 2027.">
-<meta name="theme-color" content="#5E7350">
+<title>MAWI Villas — Private villas in Marloth Park, Kruger · Opening 2027</title>
+<meta name="description" content="Three private self-catering villas with pools in Marloth Park, on the southern border of Kruger National Park. Opening in 2027 — register your interest.">
+<meta name="theme-color" content="#2C3626">
+<link rel="canonical" href="https://www.mawivillas.co.za/">
+<meta property="og:type" content="website">
 <meta property="og:title" content="MAWI Villas — Opening 2027">
-<meta property="og:description" content="Three private self-catering villas in Marloth Park, on the southern border of Kruger National Park.">
+<meta property="og:description" content="Three private self-catering villas with pools in Marloth Park, on the southern border of Kruger National Park.">
 <meta property="og:image" content="https://www.mawivillas.co.za/og.jpg">
 <meta property="og:url" content="https://www.mawivillas.co.za/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="img/mood/suite.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"MAWI Villas","url":"https://www.mawivillas.co.za/","logo":"https://www.mawivillas.co.za/img/full.png","email":"mail@mawivillas.co.za","description":"Three private self-catering villas with pools in Marloth Park, on the southern border of Kruger National Park.","address":{"@type":"PostalAddress","addressLocality":"Marloth Park","addressRegion":"Mpumalanga","addressCountry":"ZA"},"sameAs":["https://www.instagram.com/mawivillas","https://www.facebook.com/mawivillas"]}
+</script>
 <style>
 :root{
   --sage:#5E7350; --sage-ink:#1C2A14;
-  --bush:#2C3626; --bush-ink:#9DB07E;
-  --linen:#FBF8F6;
-  --font:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --bush:#252E20; --bush-2:#2C3626; --bush-ink:#A9BA8C; --bush-hi:#D3DDBF;
+  --linen:#F7F3EE; --linen-2:#EFE8DF; --ink:#1B1B18; --mute:#6A685F;
+  --brass:#B08A4E;
+  --sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --ease:cubic-bezier(.2,.7,.1,1);
+  --pad:clamp(20px,4vw,56px);
   color-scheme:light;
 }
 *{box-sizing:border-box}
-html,body{margin:0;height:100%}
-body{
-  background:var(--sage);color:var(--linen);font-family:var(--font);
-  font-size:18px;line-height:1.4;letter-spacing:-.005em;-webkit-font-smoothing:antialiased;
-  display:flex;flex-direction:column;min-height:100svh;
-  padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);
-}
-/* fine grain */
-body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:multiply;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-.wrap{width:100%;max-width:1680px;margin:0 auto;padding-inline:clamp(20px,4vw,40px)}
-.small{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.rule{border:0;border-top:1.5px solid currentColor;margin:0;opacity:.55}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--linen);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;letter-spacing:-.003em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+p,h1,h2,h3,h4,ul,figure,dl,dd{margin:0}
+ul{padding:0;list-style:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{width:100%;max-width:1440px;margin:0 auto;padding-inline:max(var(--pad),env(safe-area-inset-left,0px)) max(var(--pad),env(safe-area-inset-right,0px))}
+.eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.display{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;line-height:1.02}
+.display em{font-style:italic}
+.h-xl{font-size:clamp(46px,7vw,112px)}
+.h-l{font-size:clamp(38px,5vw,76px)}
+.h-m{font-size:clamp(28px,3vw,42px)}
+.lede{font-size:clamp(18px,1.5vw,21px);line-height:1.6;color:var(--mute);max-width:56ch}
+.rule{height:1px;background:currentColor;opacity:.22;border:0;margin:0}
+section{position:relative}
+.sec{padding-block:clamp(80px,11vw,170px)}
 
-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:22px}
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
 
-main{flex:1;display:flex;align-items:center}
-.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(28px,4vw,48px);padding-block:clamp(32px,6vw,80px)}
-.logo{width:clamp(180px,24vw,300px);aspect-ratio:661/651;background:currentColor;
-  -webkit-mask:url(img/full.png) center/contain no-repeat;mask:url(img/full.png) center/contain no-repeat;
-  animation:fade 1.6s cubic-bezier(.2,.7,.1,1) both}
-h1{margin:0;font-weight:300;font-size:clamp(44px,7.5vw,120px);line-height:.92;letter-spacing:-.045em;
-  animation:up 1.2s .25s cubic-bezier(.2,.7,.1,1) both}
-.lead{margin:0;max-width:34ch;font-size:clamp(19px,1.7vw,24px);line-height:1.3;letter-spacing:-.01em;opacity:.9;
-  animation:up 1.2s .45s cubic-bezier(.2,.7,.1,1) both}
-.villas{display:flex;gap:0;margin:8px 0 0;padding:0;list-style:none;border-top:1.5px solid rgba(251,248,246,.55);
-  animation:up 1.2s .65s cubic-bezier(.2,.7,.1,1) both}
-.villas li{padding:14px clamp(14px,2.4vw,32px) 0;display:flex;flex-direction:column;gap:4px}
-.villas li+li{border-left:1.5px solid rgba(251,248,246,.55)}
-.villas b{font-weight:400;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.025em}
-.villas span{opacity:.75}
+/* ---------- header ---------- */
+header.site{position:fixed;inset:0 0 auto;z-index:30;color:var(--linen);transition:background .5s,color .5s,box-shadow .5s;padding-top:env(safe-area-inset-top,0px)}
+header.site.solid{background:rgba(247,243,238,.94);color:var(--ink);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(27,27,24,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.lg{display:block;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.lg-mark{--m:url(img/mark.png);aspect-ratio:364/351;width:30px}
+.lg-word{--m:url(img/word.png);aspect-ratio:661/188;width:78px}
+.lg-full{--m:url(img/full.png);aspect-ratio:661/651}
+nav.main{display:flex;align-items:center;gap:clamp(18px,2.2vw,36px);font-size:14px;letter-spacing:.04em}
+nav.main a{text-decoration:none;position:relative;padding-block:6px}
+nav.main a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+nav.main a:not(.cta):hover::after{transform:scaleX(1)}
+.cta{display:inline-flex;align-items:center;gap:10px;border:1px solid currentColor;padding:11px 20px;text-decoration:none;font-size:13px;letter-spacing:.14em;text-transform:uppercase;transition:background .35s,color .35s,border-color .35s;cursor:pointer;background:none}
+.cta:hover{background:var(--linen);color:var(--ink);border-color:var(--linen)}
+header.site.solid .cta:hover,.on-light .cta:hover{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.cta.fill{background:var(--brass);border-color:var(--brass);color:#fff}
+.cta.fill:hover{background:var(--ink);border-color:var(--ink);color:var(--linen)}
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative}
+.menu-btn i{position:absolute;left:10px;right:10px;height:1.5px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.menu-btn i:first-child{top:17px}.menu-btn i:last-child{top:26px}
+body.menu-open .menu-btn i:first-child{top:21px;transform:rotate(45deg)}
+body.menu-open .menu-btn i:last-child{top:21px;transform:rotate(-45deg)}
+@media (max-width:960px){nav.main{display:none}.menu-btn{display:block}}
+.drawer{position:fixed;inset:0;z-index:25;background:var(--bush);color:var(--linen);display:flex;flex-direction:column;justify-content:center;padding:100px var(--pad) 40px;opacity:0;pointer-events:none;transition:opacity .5s var(--ease)}
+body.menu-open .drawer{opacity:1;pointer-events:auto}
+body.menu-open header.site{color:var(--linen);background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.drawer a{display:block;text-decoration:none;font-family:var(--serif);font-weight:300;font-size:clamp(40px,11vw,64px);line-height:1.15}
+.drawer .small{margin-top:40px;font-size:14px;color:var(--bush-ink)}
 
-footer{background:var(--bush);color:var(--bush-ink)}
-footer .wrap{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-block:20px}
+/* ---------- hero ---------- */
+.hero{height:100svh;min-height:560px;color:var(--linen);overflow:hidden;background:var(--bush)}
+.slides,.slides figure{position:absolute;inset:0}
+.slides figure{opacity:0;transition:opacity 1.8s ease}
+.slides figure.on{opacity:1}
+.slides img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+.slides figure.on img{animation:kb 9s linear forwards}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,.55) 0%,rgba(20,24,16,.18) 32%,rgba(20,24,16,.25) 60%,rgba(20,24,16,.78) 100%)}
+.hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(22px,3vw,34px);padding-top:60px}
+.hero .lg-full{width:clamp(150px,17vw,230px);opacity:0;animation:fadeup 1.8s .2s var(--ease) forwards}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(26px,3vw,42px);line-height:1.2;max-width:22ch;opacity:0;animation:fadeup 1.6s .6s var(--ease) forwards}
+.hero h1 em{font-style:italic}
+.hero .acts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeup 1.6s .9s var(--ease) forwards}
+.hero .badge{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;opacity:0;animation:fadeup 1.6s .4s var(--ease) forwards}
+@keyframes fadeup{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-foot{position:absolute;z-index:2;left:0;right:0;bottom:calc(26px + env(safe-area-inset-bottom,0px))}
+.hero-foot .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase}
+.dots{display:flex;gap:8px}
+.dots button{width:28px;height:2px;border:0;padding:0;background:rgba(247,243,238,.35);cursor:pointer;position:relative;overflow:hidden}
+.dots button::after{content:"";position:absolute;inset:0;background:var(--linen);transform:scaleX(0);transform-origin:left}
+.dots button.on::after{animation:bar 7s linear forwards}
+@keyframes bar{to{transform:scaleX(1)}}
+.scroll{display:flex;align-items:center;gap:12px;text-decoration:none}
+.scroll i{width:1px;height:38px;background:rgba(247,243,238,.5);position:relative;overflow:hidden}
+.scroll i::after{content:"";position:absolute;left:0;right:0;height:14px;background:var(--linen);animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{from{top:-14px}to{top:38px}}
 
-@keyframes up{from{transform:translateY(.4em);opacity:0}to{transform:none;opacity:1}}
-@keyframes fade{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important}}
-@media (max-width:520px){.villas{flex-direction:column;border-top:0}.villas li{padding:12px 0;border-top:1.5px solid rgba(251,248,246,.55)}.villas li+li{border-left:0}}
+/* ---------- intro ---------- */
+.intro .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(32px,6vw,110px);align-items:end}
+.intro .display{max-width:15ch}
+.intro .copy{display:flex;flex-direction:column;gap:22px}
+@media (max-width:880px){.intro .grid{grid-template-columns:1fr}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(60px,8vw,120px);border-top:1px solid rgba(27,27,24,.16)}
+.facts div{padding:26px 24px 0 0}
+.facts div+div{padding-left:24px;border-left:1px solid rgba(27,27,24,.16)}
+.facts b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(34px,3.6vw,54px);line-height:1}
+.facts span{display:block;margin-top:10px;font-size:14px;color:var(--mute)}
+@media (max-width:760px){.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){padding-left:0;border-left:0}.facts div:nth-child(n+3){margin-top:28px}}
+
+/* ---------- villas ---------- */
+.villas{background:var(--linen-2)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 60px;flex-wrap:wrap;margin-bottom:clamp(44px,6vw,80px)}
+.sec-head .lede{max-width:44ch}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.4vw,36px)}
+@media (max-width:900px){.vgrid{grid-template-columns:1fr;gap:56px}}
+.villa{display:flex;flex-direction:column;gap:20px}
+.villa .ph{aspect-ratio:4/5;overflow:hidden;background:var(--bush)}
+.villa .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.villa:hover .ph img{transform:scale(1.05)}
+.villa .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.villa h3{font-family:var(--serif);font-weight:300;font-size:clamp(32px,2.8vw,42px);line-height:1}
+.villa .g{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+.villa p{color:var(--mute);max-width:42ch}
+.villa ul{display:flex;flex-wrap:wrap;gap:8px}
+.villa li{font-size:13px;border:1px solid rgba(27,27,24,.2);padding:5px 11px}
+.note{margin-top:clamp(40px,5vw,64px);font-size:14px;color:var(--mute);display:flex;gap:12px;align-items:center}
+.note::before{content:"";width:28px;height:1px;background:currentColor}
+
+/* ---------- quote band ---------- */
+.band{height:min(86vh,860px);min-height:460px;overflow:hidden;color:var(--linen);display:flex;align-items:flex-end}
+.band img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,0) 40%,rgba(20,24,16,.7))}
+.band .wrap{position:relative;z-index:2;padding-bottom:clamp(40px,6vw,90px)}
+.band blockquote{margin:0;font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(32px,4.4vw,68px);line-height:1.08;max-width:20ch}
+
+/* ---------- interiors ---------- */
+.interiors{background:var(--bush);color:var(--linen)}
+.interiors .lede{color:var(--bush-ink)}
+.masonry{columns:3 320px;column-gap:clamp(12px,1.4vw,20px)}
+.masonry button{display:block;width:100%;border:0;padding:0;margin:0 0 clamp(12px,1.4vw,20px);background:#1a2016;cursor:zoom-in;overflow:hidden;break-inside:avoid;position:relative}
+@media (max-width:640px){.masonry{columns:2;column-gap:8px}.masonry button{margin-bottom:8px}}
+.masonry img{width:100%;height:auto;transition:transform 1.4s var(--ease),filter .6s;filter:saturate(.92)}
+.masonry button:hover img{transform:scale(1.04);filter:none}
+.disclaim{margin-top:28px;font-size:13px;color:var(--bush-ink);display:flex;gap:12px;align-items:center}
+.disclaim::before{content:"";width:28px;height:1px;background:currentColor}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(16,19,13,.97);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .45s var(--ease);padding:max(56px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(56px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb.open{opacity:1;pointer-events:auto}
+.lb img{max-width:min(1400px,100%);max-height:100%;object-fit:contain;transition:opacity .35s}
+.lb button{position:absolute;background:none;border:1px solid rgba(247,243,238,.35);color:var(--linen);width:48px;height:48px;cursor:pointer;font-size:18px;transition:background .3s}
+.lb button:hover{background:rgba(247,243,238,.1)}
+.lb .x{top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px))}
+.lb .pv{left:max(14px,env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%)}
+.lb .nx{right:max(14px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%)}
+.lb .ct{position:absolute;bottom:max(18px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:var(--bush-ink);font-size:12px;letter-spacing:.2em}
+@media (max-width:600px){.lb .pv,.lb .nx{top:auto;bottom:max(8px,env(safe-area-inset-bottom,0px));transform:none}}
+
+/* ---------- marloth ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,110px);align-items:center}
+.split .ph{aspect-ratio:4/5;overflow:hidden}
+.split .ph img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){.split{grid-template-columns:1fr}.split .ph{aspect-ratio:4/3}}
+.compare{margin-top:36px;border-top:1px solid rgba(27,27,24,.16)}
+.compare details{border-bottom:1px solid rgba(27,27,24,.16)}
+.compare summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-family:var(--serif);font-size:clamp(23px,2vw,29px);font-weight:400;line-height:1.15}
+.compare summary::-webkit-details-marker{display:none}
+.compare summary i{flex:0 0 18px;height:18px;position:relative}
+.compare summary i::before,.compare summary i::after{content:"";position:absolute;left:0;right:0;top:8.5px;height:1px;background:currentColor;transition:transform .4s var(--ease)}
+.compare summary i::after{transform:rotate(90deg)}
+.compare details[open] summary i::after{transform:rotate(0)}
+.compare .ans{padding:0 0 24px;color:var(--mute);max-width:52ch}
+
+/* ---------- getting here ---------- */
+.here{background:var(--sage);color:var(--linen)}
+.here .lede{color:#E3E9D8}
+.dist{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(247,243,238,.35);margin-top:clamp(44px,6vw,80px)}
+.dist div{padding:26px 20px 0 0}
+.dist div+div{padding-left:20px;border-left:1px solid rgba(247,243,238,.35)}
+.dist b{display:block;font-family:var(--serif);font-weight:300;font-size:clamp(34px,3.4vw,52px);line-height:1}
+.dist span{display:block;margin-top:12px;font-size:14px;color:#E3E9D8;max-width:20ch}
+@media (max-width:900px){.dist{grid-template-columns:1fr 1fr}.dist div:nth-child(odd){padding-left:0;border-left:0}.dist div:nth-child(n+3){margin-top:28px}}
+.small-print{margin-top:28px;font-size:13px;color:#DCE3D0}
+
+/* ---------- interest ---------- */
+.interest .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,7vw,120px);align-items:start}
+@media (max-width:900px){.interest .grid{grid-template-columns:1fr}}
+.interest .side{display:flex;flex-direction:column;gap:26px;position:sticky;top:110px}
+@media (max-width:900px){.interest .side{position:static}}
+.perks{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.perks li{display:flex;gap:14px;align-items:baseline;color:var(--mute)}
+.perks li::before{content:"";flex:0 0 7px;height:7px;background:var(--brass);transform:rotate(45deg) translateY(-2px)}
+form.reg{display:grid;grid-template-columns:1fr 1fr;gap:28px 28px}
+form.reg .full{grid-column:1/-1}
+@media (max-width:600px){form.reg{grid-template-columns:1fr}}
+.fld{display:flex;flex-direction:column;gap:8px}
+.fld label{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.fld input,.fld select,.fld textarea{background:transparent;border:0;border-bottom:1px solid rgba(27,27,24,.3);border-radius:0;padding:10px 0 12px;font-size:19px;width:100%;min-width:0;transition:border-color .3s;-webkit-appearance:none;appearance:none}
+.fld select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231B1B18' stroke-width='1.2'/%3E%3C/svg%3E") right 4px center/12px no-repeat;padding-right:24px;cursor:pointer}
+.fld textarea{resize:vertical;min-height:90px;font-size:17px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills input{position:absolute;opacity:0;pointer-events:none}
+.pills label{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);border:1px solid rgba(27,27,24,.25);padding:9px 16px;cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.pills input:checked+label{background:var(--ink);color:var(--linen);border-color:var(--ink)}
+.pills input:focus-visible+label{outline:2px solid var(--brass);outline-offset:2px}
+.submit-row{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.submit-row .hint{font-size:13px;color:var(--mute);max-width:40ch}
+.err{color:#9A3B1E;font-size:13px;min-height:1em}
+
+/* ---------- footer ---------- */
+footer{background:var(--bush);color:var(--bush-ink);padding-block:clamp(70px,9vw,120px) calc(30px + env(safe-area-inset-bottom,0px))}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;align-items:start}
+@media (max-width:800px){.fgrid{grid-template-columns:1fr}}
+footer .lg-full{width:150px;color:var(--bush-hi)}
+footer h4{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--bush-hi);margin-bottom:16px}
+footer ul{display:flex;flex-direction:column;gap:8px}
+footer a{text-decoration:none;transition:color .3s}
+footer a:hover{color:var(--linen)}
+.fbot{margin-top:clamp(60px,8vw,100px);padding-top:22px;border-top:1px solid rgba(169,186,140,.25);display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;font-size:13px}
+.copy-btn{background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;font-size:13px}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:70;background:var(--ink);color:var(--linen);padding:13px 22px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s var(--ease);max-width:calc(100% - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero .lg-full,.hero h1,.hero .acts,.hero .badge{opacity:1}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap small">
-    <span>Marloth Park · South Africa</span>
-    <span>Opening 2027</span>
+
+<header class="site" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="MAWI Villas — home"><span class="lg lg-mark"></span><span class="lg lg-word"></span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#villas">The villas</a>
+      <a href="#interiors">Interiors</a>
+      <a href="#marloth">Marloth Park</a>
+      <a href="#getting-here">Getting here</a>
+      <a class="cta" href="#interest">Register interest</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
   </div>
-  <div class="wrap"><hr class="rule"></div>
 </header>
 
-<main>
-  <div class="wrap hero">
-    <div class="logo" role="img" aria-label="MAWI Villas"></div>
-    <h1>coming 2027</h1>
-    <p class="lead">Three private self-catering villas in Marloth Park, on the southern border of Kruger National Park.</p>
-    <ul class="villas">
-      <li><b>Mawi One</b><span class="small">2 guests</span></li>
-      <li><b>Mawi Two</b><span class="small">4 guests</span></li>
-      <li><b>Mawi Three</b><span class="small">6 guests</span></li>
-    </ul>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#villas">The villas</a>
+  <a href="#interiors">Interiors</a>
+  <a href="#marloth">Marloth Park</a>
+  <a href="#getting-here">Getting here</a>
+  <a href="#interest">Register interest</a>
+  <p class="small">Opening late 2027 · mail@mawivillas.co.za</p>
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+  <div class="slides" id="slides">
+    <figure class="on"><img src="img/mood/suite.jpg" alt="A spacious safari suite with a canopy bed, lounge and warm brass lamps"></figure>
+    <figure><img src="img/mood/pool-sunset.jpg" alt="Two loungers beside a private pool at sunset, looking out over the bush" loading="lazy"></figure>
+    <figure><img src="img/mood/veranda.jpg" alt="Sliding doors opening onto a covered veranda above the bush" loading="lazy"></figure>
+    <figure><img src="img/mood/lounge.jpg" alt="A lounge with cane chairs and soft cushions in evening light" loading="lazy"></figure>
   </div>
+  <div class="hero-in wrap">
+    <p class="badge">Marloth Park · Kruger · South Africa</p>
+    <span class="lg lg-full" role="img" aria-label="MAWI Villas"></span>
+    <h1>Three private villas on the edge of Kruger — <em>coming 2027</em></h1>
+    <div class="acts">
+      <a class="cta fill" href="#interest">Register your interest</a>
+      <a class="cta" href="#villas">Discover the villas</a>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <div class="wrap">
+      <a class="scroll" href="#intro"><i></i>Scroll</a>
+      <div class="dots" id="dots" role="tablist" aria-label="Choose image"></div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro sec" id="intro">
+  <div class="wrap">
+    <div class="grid">
+      <h2 class="display h-l rv">The bush at your door. <em>The villa all to yourself.</em></h2>
+      <div class="copy">
+        <p class="lede rv d1">MAWI Villas is a small collection of three private, self-catering villas in Marloth Park — a wildlife conservancy right across the Crocodile River from Kruger National Park.</p>
+        <p class="lede rv d2">No shared pool, no dinner schedule, no crowds. Just your own villa with a private pool, quiet nights and kudu, zebra and giraffe wandering past your terrace. Kruger is a short drive away, the rhythm of the day is yours.</p>
+      </div>
+    </div>
+    <div class="facts rv d2">
+      <div><b>3</b><span>Private villas, each fully your own</span></div>
+      <div><b>2–6</b><span>Guests per villa, from couples to families</span></div>
+      <div><b>Pool</b><span>A private pool at every villa</span></div>
+      <div><b>Solar</b><span>Solar power with battery backup</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VILLAS -->
+<section class="villas sec on-light" id="villas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv">The villas</p>
+        <h2 class="display h-l rv d1" style="margin-top:18px">One, two <em>&amp;</em> three</h2>
+      </div>
+      <p class="lede rv d2">Three villas, three sizes — each with its own pool, outdoor living and a fully equipped kitchen. Simple self check-in, and a local host close by whenever you need anything.</p>
+    </div>
+    <div class="vgrid">
+      <article class="villa rv">
+        <div class="ph"><img src="img/mood/canopy.jpg" alt="Canopy bed in soft linen with a leather bench" loading="lazy"></div>
+        <div class="top"><h3>Mawi One</h3><span class="g">2 guests</span></div>
+        <p>An intimate hideaway for two. Slow mornings under the canopy, afternoons by your own pool, sundowners as the bush comes alive.</p>
+        <ul><li>For couples</li><li>Private pool</li><li>Self-catering</li></ul>
+      </article>
+      <article class="villa rv d1">
+        <div class="ph"><img src="img/mood/tent-suite.jpg" alt="Light-filled safari suite opening onto a wooden deck" loading="lazy"></div>
+        <div class="top"><h3>Mawi Two</h3><span class="g">4 guests</span></div>
+        <p>Room for two couples or a small family, with an open living space and a terrace made for long dinners outside.</p>
+        <ul><li>Small families</li><li>Private pool</li><li>Outdoor living</li></ul>
+      </article>
+      <article class="villa rv d2">
+        <div class="ph"><img src="img/mood/pool-trees.jpg" alt="Private pool with loungers beneath large trees" loading="lazy"></div>
+        <div class="top"><h3>Mawi Three</h3><span class="g">6 guests</span></div>
+        <p>The largest villa, for families and friends travelling together. Generous space inside, and a pool deck big enough for everyone.</p>
+        <ul><li>Families &amp; friends</li><li>Private pool</li><li>Outdoor living</li></ul>
+      </article>
+    </div>
+    <p class="note">Floor plans, rates and availability will follow in 2027.</p>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<section class="band" aria-label="Atmosphere">
+  <img src="img/mood/tent-sunset.jpg" alt="" loading="lazy" id="parallax">
+  <div class="wrap">
+    <blockquote class="rv">Golden light, the call of a fish eagle, and nowhere you need to be.</blockquote>
+  </div>
+</section>
+
+<!-- INTERIORS -->
+<section class="interiors sec" id="interiors">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv" style="color:var(--bush-ink)">Interiors</p>
+        <h2 class="display h-l rv d1" style="margin-top:18px">Warm, quiet, <em>unhurried</em></h2>
+      </div>
+      <p class="lede rv d2">Natural linen, cane and warm wood, brass lamps and soft evening light. Interiors that feel like a private safari home, not a hotel room.</p>
+    </div>
+    <div class="masonry" id="gallery"></div>
+    <p class="disclaim">Mood &amp; inspiration — the atmosphere we're creating. Photography of the villas themselves follows when they're finished.</p>
+  </div>
+</section>
+
+<!-- MARLOTH -->
+<section class="sec on-light" id="marloth">
+  <div class="wrap split">
+    <div class="ph rv"><img src="img/mood/tent-corner.jpg" alt="Cane chairs by an open door with the bush beyond" loading="lazy"></div>
+    <div>
+      <p class="eyebrow rv">Why Marloth Park</p>
+      <h2 class="display h-l rv d1" style="margin-top:18px">Kruger on one side. <em>Wildlife in your garden.</em></h2>
+      <p class="lede rv d2" style="margin-top:24px">Marloth Park is a conservancy on the southern border of Kruger, where giraffe, zebra, kudu, warthog and wildebeest roam freely between the homes. Here, the safari often starts on your own terrace.</p>
+      <div class="compare rv d3">
+        <details open>
+          <summary>Instead of staying inside Kruger<i></i></summary>
+          <div class="ans">Rest camps inside the park are popular, often fully booked and you share facilities. In Marloth Park you have your own villa and private pool, still with Kruger's southern gates within easy reach for early game drives.</div>
+        </details>
+        <details>
+          <summary>Instead of Hazyview<i></i></summary>
+          <div class="ans">Hazyview is a busy town on the road to the park. Marloth Park is quiet bush, with wildlife walking past rather than traffic, and close to the southern part of Kruger.</div>
+        </details>
+        <details>
+          <summary>Instead of a hotel or lodge<i></i></summary>
+          <div class="ans">No set mealtimes or shared spaces. Cook when you like, braai under the stars and live at your own pace — with a local host nearby if you need anything.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GETTING HERE -->
+<section class="here sec" id="getting-here">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div>
+        <p class="eyebrow rv">Getting here</p>
+        <h2 class="display h-l rv d1" style="margin-top:18px">Easy to reach, <em>easy to stay</em></h2>
+      </div>
+      <p class="lede rv d2">Fly into Kruger Mpumalanga International Airport or drive from Johannesburg along the N4. Check in yourself with a key code and settle in.</p>
+    </div>
+    <div class="dist rv d2">
+      <div><b>±25 min</b><span>to Crocodile Bridge Gate, Kruger</span></div>
+      <div><b>±40 min</b><span>to Malelane Gate, Kruger</span></div>
+      <div><b>±40 min</b><span>to the Mozambique border</span></div>
+      <div><b>±1½ h</b><span>from Kruger Mpumalanga Int. Airport</span></div>
+      <div><b>±5 h</b><span>by road from Johannesburg</span></div>
+    </div>
+    <p class="small-print">Indicative driving times; exact times depend on the villa's location within Marloth Park.</p>
+  </div>
+</section>
+
+<!-- INTEREST -->
+<section class="interest sec on-light" id="interest">
+  <div class="wrap grid">
+    <div class="side">
+      <p class="eyebrow rv">Register interest</p>
+      <h2 class="display h-l rv d1">Be the first <em>to stay</em></h2>
+      <p class="lede rv d2">Leave your details and we'll let you know as soon as bookings open — before we announce the dates publicly.</p>
+      <ul class="perks rv d3">
+        <li>First access to opening dates</li>
+        <li>A personal reply, not a newsletter</li>
+        <li>Help planning your Kruger trip</li>
+      </ul>
+    </div>
+    <form class="reg rv d1" id="reg" novalidate>
+      <div class="fld"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+      <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="fld full"><label id="l-villa">Which villa</label>
+        <div class="pills" role="radiogroup" aria-labelledby="l-villa">
+          <input type="radio" name="villa" id="v0" value="No preference yet" checked><label for="v0">No preference</label>
+          <input type="radio" name="villa" id="v1" value="Mawi One (2 guests)"><label for="v1">Mawi One · 2</label>
+          <input type="radio" name="villa" id="v2" value="Mawi Two (4 guests)"><label for="v2">Mawi Two · 4</label>
+          <input type="radio" name="villa" id="v3" value="Mawi Three (6 guests)"><label for="v3">Mawi Three · 6</label>
+        </div>
+      </div>
+      <div class="fld"><label for="f-when">When would you like to travel</label>
+        <select id="f-when" name="when"></select>
+      </div>
+      <div class="fld"><label for="f-from">Travelling from</label><input id="f-from" name="from" autocomplete="country-name" placeholder="Country"></div>
+      <div class="fld full"><label for="f-msg">Anything we should know</label><textarea id="f-msg" name="msg" placeholder="Occasion, length of stay, questions…"></textarea></div>
+      <div class="full submit-row">
+        <button class="cta fill" type="submit">Send my interest</button>
+        <p class="hint">This opens your email app with your message ready to send to mail@mawivillas.co.za.</p>
+      </div>
+      <p class="err full" id="err" role="alert"></p>
+    </form>
+  </div>
+</section>
+
 </main>
 
 <footer>
-  <div class="wrap small">
-    <span>© <span id="y">2026</span> MAWI Villas</span>
-    <span>Marloth Park · Mpumalanga · South Africa</span>
+  <div class="wrap">
+    <div class="fgrid">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span class="lg lg-full" role="img" aria-label="MAWI Villas"></span>
+        <p style="max-width:34ch">Private self-catering villas in Marloth Park, on the southern border of Kruger National Park. Opening late 2027.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:mail@mawivillas.co.za">mail@mawivillas.co.za</a></li>
+          <li><button class="copy-btn" id="copyMail" type="button">Copy email address</button></li>
+          <li>Marloth Park, Mpumalanga, South Africa</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow along</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/mawivillas" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/mawivillas" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© <span id="y">2026</span> MAWI Villas</span>
+      <span>Images shown are interior inspiration.</span>
+    </div>
   </div>
 </footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <img id="lbImg" alt="">
+  <button class="x" id="lbX" aria-label="Close">✕</button>
+  <button class="pv" id="lbP" aria-label="Previous image">←</button>
+  <button class="nx" id="lbN" aria-label="Next image">→</button>
+  <p class="ct" id="lbC"></p>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)};
+  $('#y').textContent=new Date().getFullYear();
+
+  /* header state */
+  var hdr=$('#hdr');
+  function onScroll(){hdr.classList.toggle('solid',window.scrollY>window.innerHeight*0.75)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* mobile menu */
+  var btn=$('#menuBtn'),drawer=$('#drawer');
+  function setMenu(o){document.body.classList.toggle('menu-open',o);btn.setAttribute('aria-expanded',o);drawer.setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''}
+  btn.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+
+  /* hero slideshow */
+  var figs=[].slice.call(document.querySelectorAll('#slides figure')),dots=$('#dots'),cur=0,timer;
+  figs.forEach(function(f,i){var b=document.createElement('button');b.setAttribute('aria-label','Image '+(i+1));b.addEventListener('click',function(){go(i)});dots.appendChild(b)});
+  function go(i){figs[cur].classList.remove('on');dots.children[cur].classList.remove('on');cur=(i+figs.length)%figs.length;
+    var img=figs[cur].querySelector('img');img.loading='eager';
+    figs[cur].classList.add('on');var d=dots.children[cur];d.classList.remove('on');void d.offsetWidth;d.classList.add('on');
+    clearTimeout(timer);timer=setTimeout(function(){go(cur+1)},7000)}
+  go(0);
+
+  /* reveal */
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  } else document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')});
+
+  /* parallax band */
+  var px=$('#parallax');
+  if(px&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    window.addEventListener('scroll',function(){var r=px.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+      var p=(r.top+r.height/2-innerHeight/2)/innerHeight;px.style.transform='translateY('+(p*-8)+'%)'},{passive:true});
+  }
+
+  /* gallery */
+  var G=[['lounge','Lounge with cane chairs and brass lamps'],['bath','Freestanding bath by the window'],['chair','Cane armchair against a bush mural'],
+    ['tent-lamps','Bed with woven lamps and linen curtains'],['pool-sunset','Private pool at sunset'],['rhino','Canopy bed with wildlife prints'],
+    ['tub','Bath with wooden shutters'],['tent-corner','Cane chairs by the open door'],['loungers','Loungers on the deck at dusk'],
+    ['veranda','Veranda over the bush'],['canopy','Canopy bed in soft linen'],['bathroom','Quiet bathroom in dark wood'],
+    ['tent-suite','Open safari suite with a deck'],['suite','Suite with lounge and canopy bed'],['pool-trees','Pool beneath the trees'],['tent-sunset','Golden light through the curtains']];
+  var gal=$('#gallery');
+  G.forEach(function(g,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Open image: '+g[1]);
+    b.innerHTML='<img src="img/mood/'+g[0]+'.jpg" alt="'+g[1]+'" loading="lazy">';b.addEventListener('click',function(){openLb(i)});gal.appendChild(b)});
+  var lb=$('#lb'),lbImg=$('#lbImg'),li=0,lastFocus;
+  function show(i){li=(i+G.length)%G.length;lbImg.style.opacity=0;var s='img/mood/'+G[li][0]+'.jpg';
+    var im=new Image();im.onload=function(){lbImg.src=s;lbImg.alt=G[li][1];lbImg.style.opacity=1};im.src=s;
+    $('#lbC').textContent=(li+1)+' / '+G.length}
+  function openLb(i){lastFocus=document.activeElement;show(i);lb.classList.add('open');document.body.style.overflow='hidden';$('#lbX').focus()}
+  function closeLb(){lb.classList.remove('open');document.body.style.overflow='';if(lastFocus)lastFocus.focus()}
+  $('#lbX').onclick=closeLb;$('#lbP').onclick=function(){show(li-1)};$('#lbN').onclick=function(){show(li+1)};
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){if(lb.classList.contains('open'))closeLb();else setMenu(false)}
+    if(!lb.classList.contains('open'))return;if(e.key==='ArrowLeft')show(li-1);if(e.key==='ArrowRight')show(li+1)});
+  var tx=null;lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)show(li+(dx<0?1:-1));tx=null});
+
+  /* travel months: from Dec 2027 onward */
+  var sel=$('#f-when'),M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var o=document.createElement('option');o.value='Flexible';o.textContent='Flexible / not sure yet';sel.appendChild(o);
+  for(var k=0;k<18;k++){var d=new Date(2027,11+k,1);var op=document.createElement('option');op.value=op.textContent=M[d.getMonth()]+' '+d.getFullYear();sel.appendChild(op)}
+
+  /* form -> email */
+  var toast=$('#toast'),tt;
+  function say(t){toast.textContent=t;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},3200)}
+  $('#reg').addEventListener('submit',function(e){e.preventDefault();var f=e.target,err=$('#err');
+    var name=f.name.value.trim(),email=f.email.value.trim();
+    if(!name){err.textContent='Please add your name.';f.name.focus();return}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){err.textContent='Please add a valid email address.';f.email.focus();return}
+    err.textContent='';
+    var villa=f.querySelector('input[name=villa]:checked').value;
+    var body='Hello MAWI Villas,\n\nI would like to be kept up to date about opening and bookings.\n\nName: '+name+'\nEmail: '+email+'\nVilla: '+villa+'\nTravel: '+f.when.value+'\nTravelling from: '+(f.from.value.trim()||'-')+'\n\n'+(f.msg.value.trim()?f.msg.value.trim()+'\n\n':'')+'Kind regards,\n'+name;
+    window.location.href='mailto:mail@mawivillas.co.za?subject='+encodeURIComponent('Interest in MAWI Villas — '+name)+'&body='+encodeURIComponent(body);
+    say('Your email app is opening — just press send.')});
+
+  $('#copyMail').addEventListener('click',function(){var a='mail@mawivillas.co.za';
+    if(navigator.clipboard){navigator.clipboard.writeText(a).then(function(){say('Email address copied')},function(){say(a)})}else say(a)});
+})();
+</script>
 </body>
 </html>
