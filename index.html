@@ -38,6 +38,7 @@
   --pad:clamp(24px,5vw,72px);
   --gut:clamp(20px,2.4vw,40px);
   --sec:clamp(96px,11vw,168px);
+  --blk:clamp(72px,8vw,120px);
   color-scheme:light;
 }
 *,*::before,*::after{box-sizing:border-box}
@@ -95,7 +96,7 @@ h4{font-size:clamp(22px,1.8vw,28px);line-height:1.1}
 .row>*{min-width:0}
 .row>.lbl{grid-row:1;grid-column:1/-1;display:flex;gap:16px;align-items:baseline;margin:0}
 .row>.lbl span:first-child{font-family:var(--serif);font-style:italic;font-size:18px;letter-spacing:0;text-transform:none;font-weight:400;opacity:.7}
-.row>.intro{grid-row:2;grid-column:1/8}
+.row>.intro{grid-row:2;grid-column:1/7}
 .row>.intro.lead{font-family:var(--serif);font-size:clamp(30px,3vw,46px);line-height:1.1;font-weight:300}
 .row>:nth-child(3){grid-row:2;grid-column:8/13;max-width:none!important;padding-top:.6em}
 .row>.intro:only-child{grid-column:1/-1}
@@ -159,8 +160,8 @@ nav.top.scrolled .home.mini{opacity:1}
 /* ---------- hero ---------- */
 .hero{background:var(--sand);padding-top:clamp(64px,8vw,128px)}
 .hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);align-items:end;padding-bottom:clamp(48px,6vw,88px)}
-.hero-grid>h1{grid-column:1/9}
-.hero-grid .side{grid-column:9/13;display:flex;flex-direction:column;gap:20px;padding-bottom:10px}
+.hero-grid>h1{grid-column:1/7}
+.hero-grid .side{grid-column:8/13;display:flex;flex-direction:column;gap:20px;padding-bottom:10px}
 .hero-grid .side p{font-size:17px}
 .reveal{animation:up 1.4s var(--ease) both}
 @keyframes up{from{opacity:0;transform:translateY(.18em)}to{opacity:1;transform:none}}
@@ -190,43 +191,43 @@ nav.top.scrolled .home.mini{opacity:1}
 
 /* ---------- split blocks: pillars, villa features (same proportions) ---------- */
 .pl,.feat{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);align-items:center}
-.pl>:first-child,.feat>.pic{grid-column:1/8;grid-row:1;aspect-ratio:4/3;width:100%;overflow:hidden}
-.pl>.stack,.feat>.stack{grid-column:9/13;grid-row:1}
-.pl.rev>:first-child,.feat.rev>.pic{grid-column:6/13}
-.pl.rev>.stack,.feat.rev>.stack{grid-column:1/5}
+.pl>:first-child,.feat>.pic{grid-column:1/7;grid-row:1;aspect-ratio:4/3;width:100%;overflow:hidden}
+.pl>.stack,.feat>.stack{grid-column:8/13;grid-row:1}
+.pl.rev>:first-child,.feat.rev>.pic{grid-column:7/13}
+.pl.rev>.stack,.feat.rev>.stack{grid-column:1/6}
 .pl .stack p.lead,.feat .stack p.lead{max-width:none!important}
 .pl .stack>.btn,.feat .acts{margin-top:8px}
 .pl .btn{align-self:flex-start}
 .feat{padding-block:clamp(48px,5vw,80px);border-top:1px solid var(--line)}
 .dark .feat{border-top-color:var(--line-dark)}
 .feat:first-child{border-top:0;padding-top:0}
-#featList{margin-top:clamp(56px,6vw,96px)}
+#featList{margin-top:var(--blk)}
 .feat h3{font-size:clamp(40px,4vw,64px);line-height:1}
 .feat .pic{display:block}
 .feat .pic:hover,.pl .pic:hover{filter:saturate(1) contrast(1.03)}
 @media (max-width:900px){.pl>:first-child,.feat>.pic,.pl.rev>:first-child,.feat.rev>.pic,.pl>.stack,.feat>.stack,.pl.rev>.stack,.feat.rev>.stack{grid-column:1/-1;grid-row:auto}.pl>.stack,.feat>.stack{margin-top:32px}}
 
 /* ---------- villas page ---------- */
-#villaList{margin-top:clamp(56px,6vw,96px)}
+#villaList{margin-top:var(--blk)}
 .villa{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:18px;padding-block:48px;border-top:1px solid var(--line-dark)}
 .villa:first-child{border-top:0;padding-top:0}
-.villa>.frame{grid-column:1/8;grid-row:1/3;display:block;overflow:hidden}
+.villa>.frame{grid-column:1/7;grid-row:1/3;display:block;overflow:hidden}
 .villa>.frame .pic{aspect-ratio:4/3;width:100%}
 .villa>.frame:hover .pic{transform:scale(1.02);filter:saturate(1)}
-.villa>div:not(.txt){grid-column:9/13;grid-row:1;align-self:end}
+.villa>div:not(.txt){grid-column:8/13;grid-row:1;align-self:end}
 .villa>div:not(.txt) .lead{margin-top:10px!important}
-.villa>.txt{grid-column:9/13;grid-row:2;display:flex;flex-direction:column;gap:22px;align-self:start}
+.villa>.txt{grid-column:8/13;grid-row:2;display:flex;flex-direction:column;gap:22px;align-self:start}
 .villa h3{font-size:clamp(40px,4vw,64px);line-height:1}
 @media (max-width:900px){.villa>.frame,.villa>div:not(.txt),.villa>.txt{grid-column:1/-1;grid-row:auto}}
 .specs{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;padding-top:16px;border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 25%,transparent)}
 .specs dd{margin:0}
 
 /* ---------- in every villa ---------- */
-.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gut);margin-top:clamp(56px,6vw,96px);grid-auto-flow:dense}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gut);margin-top:var(--blk);grid-auto-flow:dense}
 .gallery .pic{aspect-ratio:4/5;cursor:zoom-in}
 .gallery .pic.wide{grid-column:span 2;aspect-ratio:auto}
 @media (max-width:700px){.gallery{grid-template-columns:1fr 1fr;gap:10px}.gallery .pic.wide{grid-column:1/-1;aspect-ratio:3/2}}
-.std{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:48px;margin-top:clamp(64px,7vw,112px)}
+.std{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:48px;margin-top:var(--blk)}
 .std>div{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:12px}
 .std h3{font-size:clamp(26px,2.2vw,34px);display:flex;align-items:baseline}
 .std p{color:var(--ink-soft)}
@@ -234,11 +235,11 @@ nav.top.scrolled .home.mini{opacity:1}
 @media (max-width:560px){.std{grid-template-columns:1fr}}
 
 /* ---------- marloth / kruger ---------- */
-.row .stack{grid-row:2;grid-column:8/13}
+.row .stack{grid-row:2;grid-column:8/13;padding-top:.6em}
 .dist{border-top:1px solid currentColor;border-top-color:color-mix(in srgb,currentColor 25%,transparent)}
 .dist li{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);font-size:15px}
 .dist li span:last-child{text-align:right;opacity:.8}
-.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:48px;margin-top:clamp(64px,7vw,112px)}
+.compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:48px;margin-top:var(--blk)}
 .compare>div{border-top:1px solid var(--line);padding-top:24px}
 .compare h3{display:flex;flex-direction:column;gap:10px;font-size:clamp(28px,2.4vw,38px);margin-bottom:22px}
 .compare h3 small{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase}
@@ -251,19 +252,19 @@ nav.top.scrolled .home.mini{opacity:1}
 .gates th,.gates td{padding:14px 8px;text-align:center;border-bottom:1px solid var(--line-dark);font-weight:300}
 .gates thead th{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
 .gates tbody th{text-align:left;font-weight:400;white-space:nowrap}
-.facts4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut);row-gap:32px;margin-top:clamp(64px,7vw,112px)}
+.facts4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut);row-gap:32px;margin-top:var(--blk)}
 .facts4>div{border-top:1px solid var(--line-dark);padding-top:22px;display:flex;flex-direction:column;gap:10px}
 .facts4 b{font-family:var(--serif);font-weight:300;font-size:clamp(32px,3vw,46px);line-height:1}
 @media (max-width:760px){.facts4{grid-template-columns:1fr 1fr}}
 
 /* ---------- guide ---------- */
-.gtabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:clamp(56px,6vw,88px)}
+.gtabs{display:flex;flex-wrap:wrap;gap:10px;margin-top:var(--blk)}
 .gtab{padding:14px 20px}
 .gtab svg{width:16px;height:16px}
 .gtab[aria-selected="true"]{background:var(--ink);color:var(--sand);border-color:var(--ink)}
 .gpanel{margin-top:48px}
 .gintro{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:20px;align-items:end;margin-bottom:24px}
-.gintro>.lead{grid-column:1/8}
+.gintro>.lead{grid-column:1/7}
 .gintro>.chips{grid-column:8/13;justify-content:flex-end}
 @media (max-width:900px){.gintro>*{grid-column:1/-1!important}.gintro>.chips{justify-content:flex-start}}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -282,7 +283,7 @@ nav.top.scrolled .home.mini{opacity:1}
 .card .kind{display:flex;justify-content:space-between;min-height:1em}
 .route{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:32px;align-items:start}
 .route>.map{grid-column:1/7;border:1px solid var(--line);background:#F6F1E8}
-.route>.legs{grid-column:7/13}
+.route>.legs{grid-column:8/13}
 .map svg{display:block;width:100%;height:auto}
 @media (max-width:900px){.route>*{grid-column:1/-1!important}}
 .legs{display:flex;flex-direction:column;border-top:1px solid var(--line)}
@@ -296,9 +297,9 @@ nav.top.scrolled .home.mini{opacity:1}
 .mroute.on{opacity:1;stroke-width:4.5}
 
 /* ---------- book ---------- */
-.bookgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:56px;margin-top:clamp(56px,6vw,96px)}
-.bookgrid>.widget{grid-column:1/8}
-.bookgrid>.stack{grid-column:9/13;gap:48px}
+.bookgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:56px;margin-top:var(--blk)}
+.bookgrid>.widget{grid-column:1/7}
+.bookgrid>.stack{grid-column:8/13;gap:48px}
 @media (max-width:900px){.bookgrid>*{grid-column:1/-1!important}}
 .widget{border:1px solid var(--line-dark);padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;gap:28px}
 .wtop{display:flex;justify-content:space-between;gap:12px}
@@ -322,17 +323,17 @@ nav.top.scrolled .home.mini{opacity:1}
 .months{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin-top:8px;font-size:11px;text-align:center;opacity:.8}
 
 /* ---------- hosts / reviews / faq / contact ---------- */
-.hosts{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:clamp(56px,6vw,96px);align-items:start}
-.hosts>:first-child{grid-column:1/6;width:100%}
-.hosts>.stack{grid-column:7/13;padding-top:8px}
+.hosts{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:var(--blk);align-items:start}
+.hosts>:first-child{grid-column:1/7;width:100%}
+.hosts>.stack{grid-column:8/13;padding-top:8px}
 .sign{font-style:italic;font-size:clamp(34px,3vw,48px)}
 @media (max-width:860px){.hosts>*{grid-column:1/-1!important}}
-.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:clamp(56px,6vw,96px)}
+.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:var(--blk)}
 .revs .rev{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:14px;min-height:200px}
 .revs .rev .score{font-size:clamp(48px,4.5vw,72px);line-height:1}
 .revs .rev .empty{color:var(--ink-soft)}
 @media (max-width:860px){.revs{grid-template-columns:1fr}}
-.faq{margin-top:clamp(56px,6vw,96px);border-top:1px solid var(--line)}
+.faq{margin-top:var(--blk);border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 24px;gap:24px;align-items:center;padding:28px 0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.2vw,34px);line-height:1.2}
 .faq summary::-webkit-details-marker{display:none}
@@ -341,10 +342,10 @@ nav.top.scrolled .home.mini{opacity:1}
 .faq summary i::after{transform:rotate(90deg)}
 .faq details[open] summary i::after{transform:rotate(0)}
 .faq .ans{padding:0 0 30px;max-width:64ch;color:var(--ink-soft);display:flex;flex-direction:column;gap:12px}
-.contact-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:clamp(56px,6vw,96px);align-items:start}
-.contact-grid>.lg-full{grid-column:1/4;width:min(200px,60%)}
-.contact-grid>.clist:nth-child(2){grid-column:5/9}
-.contact-grid>.clist:nth-child(3){grid-column:9/13}
+.contact-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:var(--blk);align-items:start}
+.contact-grid>.lg-full{grid-column:1/7;width:min(180px,50%)}
+.contact-grid>.clist:nth-child(2){grid-column:8/13}
+.contact-grid>.clist:nth-child(3){grid-column:8/13}
 @media (max-width:860px){.contact-grid>*{grid-column:1/-1!important}}
 .clist{display:flex;flex-direction:column;gap:28px}
 .clist>div{border-top:1px solid var(--line-dark);padding-top:18px;display:flex;flex-direction:column;gap:8px}
@@ -355,7 +356,7 @@ nav.top.scrolled .home.mini{opacity:1}
 .nform{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:28px;align-items:end;margin-top:56px}
 .nform>.fld:nth-child(1){grid-column:1/4}
 .nform>.fld:nth-child(2){grid-column:4/7}
-.nform>.fld:nth-child(3){grid-column:7/11}
+.nform>.fld:nth-child(3){grid-column:8/11}
 .nform>.btn{grid-column:11/13}
 @media (max-width:900px){.nform>*{grid-column:1/-1!important}.nform>.btn{justify-self:start}}
 
@@ -363,15 +364,17 @@ nav.top.scrolled .home.mini{opacity:1}
 #villa-view{background:var(--sand);color:var(--ink);padding-bottom:var(--sec)}
 .vback{display:inline-block;margin-top:40px;text-decoration:none}
 .vhead{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:24px;align-items:end;padding-block:clamp(40px,5vw,72px) clamp(40px,4vw,56px)}
-.vhead>h1{grid-column:1/8}
-.vhead>.stack{grid-column:9/13}
+.vhead>h1{grid-column:1/7}
+.vhead>.stack{grid-column:8/13}
 @media (max-width:860px){.vhead>*{grid-column:1/-1!important}}
 .vgal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,clamp(160px,18vw,300px));gap:var(--gut)}
 .vgal .pic{cursor:zoom-in}
 .vgal .pic:first-child{grid-row:span 2}
 .vgal .pic:hover{filter:saturate(1)}
 @media (max-width:700px){.vgal{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:clamp(120px,36vw,200px);gap:8px}.vgal .pic:first-child{grid-column:1/-1;grid-row:auto}}
-.vbody{display:grid;grid-template-columns:1fr 1fr 1.4fr;column-gap:var(--gut);row-gap:32px;padding-block:40px 56px}
+.vbody{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:32px;padding-block:40px 56px}
+.vbody>:first-child{grid-column:1/7}
+.vbody>:not(:first-child){grid-column:8/13!important}
 .vbody>*{min-width:0}
 @media (max-width:860px){.vbody{grid-template-columns:1fr}.vbody>*{grid-column:1/-1!important}}
 .incl{display:grid;grid-template-columns:1fr 1fr;column-gap:var(--gut)}
@@ -386,9 +389,9 @@ nav.top.scrolled .home.mini{opacity:1}
 /* ---------- footer ---------- */
 footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px,9vw,128px) calc(32px + env(safe-area-inset-bottom,0px))}
 .ftop{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);align-items:end;padding-bottom:40px;border-bottom:1px solid var(--line-dark)}
-.ftop>a{grid-column:1/4;color:var(--on-dark)!important}
+.ftop>a{grid-column:1/7;color:var(--on-dark)!important}
 .ftop .lg-full{width:124px}
-.frow{grid-column:4/13;display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px 28px;font-family:var(--serif);font-weight:300;font-size:clamp(22px,1.8vw,28px)}
+.frow{grid-column:8/13;display:flex;justify-content:flex-start;flex-wrap:wrap;gap:8px 28px;font-family:var(--serif);font-weight:300;font-size:clamp(22px,1.8vw,28px)}
 .frow a{text-decoration:none}
 .frow a:hover{opacity:.7}
 .fcols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut);row-gap:32px;padding-block:44px 56px}
@@ -425,6 +428,45 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
 .rv{opacity:0;transform:translateY(24px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* ---------- shared text block: heading left, copy right ---------- */
+.split{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gut);row-gap:24px;margin-top:var(--blk);padding-top:28px;border-top:1px solid var(--line);align-items:start}
+.split>h3{grid-column:1/7;font-size:clamp(34px,3.2vw,52px);line-height:1.05}
+.split>.body{grid-column:8/13;display:flex;flex-direction:column;gap:18px;padding-top:.5em}
+.split>.body p:not(.lead){color:inherit;opacity:.82}
+.dark .split{border-top-color:var(--line-dark)}
+@media (max-width:860px){.split>*{grid-column:1/-1!important}}
+.std4{grid-template-columns:repeat(4,minmax(0,1fr))!important;margin-top:48px!important}
+.dark .std>div{border-top-color:var(--line-dark)}.dark .std p{color:var(--on-dark-soft)}
+@media (max-width:900px){.std4{grid-template-columns:1fr 1fr!important}}
+/* experiences */
+.xgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut);row-gap:56px;margin-top:var(--blk)}
+.xcard{display:flex;flex-direction:column;gap:14px}
+.xcard .cimg{aspect-ratio:4/3;width:100%}
+.xcard .cimg svg{width:44px;height:44px}
+.xcard h4{margin-top:6px}
+.xcard p{font-size:15px;color:var(--ink-soft)}
+.note{margin-top:40px;opacity:.7}
+@media (max-width:1000px){.xgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.xgrid{grid-template-columns:1fr}}
+.pkgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gut);row-gap:24px;margin-top:48px}
+.pkg{border:1px solid var(--line);padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:20px;background:rgba(255,255,255,.18)}
+.pkg h3{font-size:clamp(32px,2.8vw,44px)}
+.pkg .ticks{flex:1}
+.pkg .btn{align-self:flex-start}
+@media (max-width:900px){.pkgs{grid-template-columns:1fr}}
+/* booking steps */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gut);row-gap:40px;margin-top:48px;padding:0;list-style:none}
+.steps li{border-top:1px solid var(--line-dark);padding-top:22px;display:flex;flex-direction:column;gap:10px}
+.steps .sn{font-family:var(--serif);font-style:italic;font-size:20px;opacity:.7}
+.steps p{font-size:15px;color:var(--on-dark-soft)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+/* section headers: copy aligned to the top of the heading */
+.row>:nth-child(3){padding-top:.6em}
+
+.band:not(.light):not(.dark):not(.news) .cimg{background:var(--sand)}
+.frow{gap:6px 24px;font-size:clamp(20px,1.6vw,24px)}
 
 .row>p.small{grid-row:2;grid-column:8/13;padding-top:.6em}
 /* photos */
@@ -555,14 +597,20 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
     <div class="stack"><p class="small">Kruger</p><h2 class="mid" data-i="k_h">the big five, across the river</h2><p class="lead" data-i="pl_k_p">Enter Kruger through Crocodile Bridge or Malelane gate. Gate times, fees and how to plan your drive.</p><a class="btn sq" href="#kruger" data-i="explore">Explore</a></div>
   </div>
 </section>
-<section class="pillar light" data-pages="home">
+<section class="pillar" data-pages="home">
   <div class="wrap pl rev">
+    <div class="pic p-glow" role="img" aria-label="Golden light through linen curtains"></div>
+    <div class="stack"><p class="small" data-i="n_exp2">Experiences</p><h2 class="mid" data-i="hx_exp">guides, bikes & breakfast at dawn</h2><p class="lead" data-i="hx_expp">Guided game drives, a breakfast basket at your door before the gates open, bikes to explore the village. We arrange the extras, and three packages bring them together.</p><a class="btn sq" href="#experiences" data-i="explore">Explore</a></div>
+  </div>
+</section>
+<section class="pillar light" data-pages="home">
+  <div class="wrap pl">
     <div class="pic p-lounge" role="img" aria-label="Lounge in warm light"></div>
     <div class="stack"><p class="small" data-i="n_guide">Guide</p><h2 class="mid" data-i="g_h">our guide to south africa</h2><p class="lead" data-i="g_p">Tips for the bush, the way in through Johannesburg and our own favourites in Cape Town, where we live.</p><a class="btn sq" href="#guide" data-i="explore">Explore</a></div>
   </div>
 </section>
 <section class="pillar" data-pages="home">
-  <div class="wrap pl">
+  <div class="wrap pl rev">
     <div class="pic p-chair" role="img" aria-label="Cane armchair before a bush mural"></div>
     <div class="stack"><p class="small" data-i="m_story">Our story</p><h2 class="mid" data-i="h_h">meet your hosts</h2><p class="lead" data-i="h_p">A Dutch family who made South Africa home.</p><a class="btn sq" href="#hosts" data-i="explore">Explore</a></div>
   </div>
@@ -596,7 +644,15 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
       <p class="lead" style="max-width:32ch" data-i="v_text">Each villa is let as a whole, with its own pool and braai. The same linen, kitchen kit and house guide in every one, and side by side if you travel together.</p>
     </div>
     <div id="villaList"></div>
-    <hr class="rule">
+    <div class="split">
+      <h3 data-i="vx_h">how our villas work</h3>
+      <div class="body">
+        <p class="lead" data-i="vx_p1">Each villa is let as a whole and never shared. The house, the garden, the pool and the braai are yours for the length of your stay, with a local team close by for anything you need.</p>
+        <p data-i="vx_p2">All three villas are set up to one standard: quality linen and towels, a fully equipped kitchen, fibre Wi-Fi, solar power with battery backup and a digital house guide with everything from gate times to the nearest doctor.</p>
+        <p data-i="vx_p3">Travelling with family or friends? Book two or all three villas and stay side by side, each with your own space and your own pool.</p>
+      </div>
+    </div>
+    <hr class="rule" style="margin-top:var(--blk)">
     <div class="row">
       <p class="intro" data-i="v_all">Travelling as a group of up to twelve? Book all three villas side by side.</p>
       <p class="small muted" data-i="v_mood">Photos are mood images until our own are ready.</p>
@@ -633,6 +689,13 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
       <div><h3><svg class="gl" aria-hidden="true"><use href="#g-branch"/></svg><span data-i="s4_h">Self check-in</span></h3><p data-i="s4_p">Collect your keys and codes at Field Security in the Marloth Park Bush Centre, at your own pace.</p></div>
       <div><h3><svg class="gl" aria-hidden="true"><use href="#g-spark"/></svg><span data-i="s5_h">Fibre internet</span></h3><p data-i="s5_p">Fast Wi-Fi for sharing the day's sightings.</p></div>
       <div><h3><svg class="gl" aria-hidden="true"><use href="#g-sun"/></svg><span data-i="s6_h">House guide</span></h3><p data-i="s6_p">Kruger gates and times, game-drive operators, shops and emergency numbers in one place.</p></div>
+    </div>
+    <div class="split">
+      <h3 data-i="sx_h">looked after, quietly</h3>
+      <div class="body">
+        <p class="lead" data-i="sx_p1">After every stay a local supervisor checks the villa once it has been cleaned, so everything is exactly right when you walk in. Our housekeeper and gardener keep the houses and gardens in shape, and small repairs are handled straight away.</p>
+        <p data-i="sx_p2">Willemijn takes care of your booking and your messages, in English, Dutch or German, and is reachable throughout your stay. A few days before you arrive you receive the house guide with directions and your check-in details.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -680,6 +743,13 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
         </ul>
       </div>
     </div>
+    <div class="split">
+      <h3 data-i="mx_h">life in a bush village</h3>
+      <div class="body">
+        <p class="lead" data-i="mx_p1">Marloth Park is a wildlife sanctuary where people and animals share the same space. Giraffe, zebra, kudu, wildebeest and warthog wander between the houses, and from the riverbank you look straight across into Kruger. Inside the park lies Lionspruit, a fenced game reserve you can drive through.</p>
+        <p data-i="mx_p2">The park has a few restaurants, a small shopping centre and a fuel station, and the larger supermarkets in Komatipoort and Malelane are a short drive away. Evenings are quiet: no streetlights, just the sounds of the bush and a sky full of stars.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -720,6 +790,11 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
       <div><b class="num">500+</b><span data-i="k_f3">Bird species recorded in the park</span> <span class="tag vf">Verify</span></div>
       <div><b>May–Sep</b><span data-i="k_f4">Dry season, best for game viewing</span></div>
     </div>
+    <div class="split" style="border-top-color:var(--line-dark)">
+      <h3 data-i="kx_h">highlights of the south</h3>
+      <div class="body"><p class="lead" data-i="kx_p">Southern Kruger is the most wildlife-rich part of the park. These are the places we send our guests first.</p></div>
+    </div>
+    <div class="std std4"><div><h3><svg class="gl" aria-hidden="true"><use href="#g-river"/></svg><span data-i="kx1_h">Lower Sabie</span></h3><p data-i="kx1_p">A rest camp on the Sabie River, about 34 km from Crocodile Bridge gate. Have breakfast on the deck while elephants come down to drink.</p></div><div><h3><svg class="gl" aria-hidden="true"><use href="#g-sun"/></svg><span data-i="kx2_h">Sunset Dam</span></h3><p data-i="kx2_p">Just outside Lower Sabie: hippos, crocodiles and water birds, at their best in the late afternoon light.</p></div><div><h3><svg class="gl" aria-hidden="true"><use href="#g-acacia"/></svg><span data-i="kx3_h">Crocodile Bridge</span></h3><p data-i="kx3_p">The gate closest to Marloth Park, with open plains to the north that are known for buffalo, rhino and lion.</p></div><div><h3><svg class="gl" aria-hidden="true"><use href="#g-branch"/></svg><span data-i="kx4_h">Berg-en-Dal</span></h3><p data-i="kx4_p">Hilly, rocky bush near Malelane gate, with a walking trail along the camp fence and a good chance of leopard.</p></div></div>
   </div>
 </section>
 
@@ -741,12 +816,31 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
   </div>
 </section>
 
+
+<section class="band" id="sec-experiences" data-pages="experiences" hidden>
+  <div class="wrap">
+    <hr class="rule">
+    <div class="row">
+      <p class="intro mid" data-i="x_h">experiences & packages</p>
+      <p class="lbl lead"><span>06.</span><span data-i="n_exp">Experiences</span></p>
+      <p class="lead" data-i="x_p">Make more of your stay. We arrange the extras with trusted local partners, so all you have to do is show up.</p>
+    </div>
+    <div class="xgrid"><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-acacia"/></svg></div><h4 data-i="x1_h">Guided game drives</h4><p data-i="x1_p">Explore Kruger with an experienced field guide in an open safari vehicle. Sunrise, sunset and full-day drives, with pick-up at your villa.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-sun"/></svg></div><h4 data-i="x2_h">Safari breakfast basket</h4><p data-i="x2_p">Delivered to your door before the gates open: hot coffee and tea in flasks, rusks, fresh fruit, yoghurt and sandwiches for the road.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-branch"/></svg></div><h4 data-i="x3_h">Bicycle hire</h4><p data-i="x3_p">Explore the sand roads of Marloth Park at your own pace. Bikes and helmets for the whole family, with a map of the best river lookouts.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-river"/></svg></div><h4 data-i="x4_h">Sundowner hamper</h4><p data-i="x4_p">Cold drinks, snacks and a blanket, packed for the river lookout as the sun goes down over Kruger.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-spark"/></svg></div><h4 data-i="x5_h">Welcome braai pack</h4><p data-i="x5_p">Firewood, boerewors and cuts from the local butcher and fresh salads, ready in the fridge when you arrive.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-sun"/></svg></div><h4 data-i="x6_h">Groceries before arrival</h4><p data-i="x6_p">Send us your shopping list and we stock the fridge and pantry, so your holiday starts the moment you walk in.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-river"/></svg></div><h4 data-i="x7_h">Airport transfers</h4><p data-i="x7_p">A driver meets you at Kruger Mpumalanga International Airport and brings you to the villa, and back again at the end of your stay.</p></article><article class="xcard"><div class="cimg"><svg aria-hidden="true" viewBox="0 0 100 100"><use href="#g-acacia"/></svg></div><h4 data-i="x8_h">Day trips</h4><p data-i="x8_p">The Panorama Route and Blyde River Canyon, or a day across the border, with a guide who knows the way.</p></article></div>
+    <p class="small note" data-i="x_note">All experiences are on request and can be added when you book or during your stay. Prices follow when bookings open.</p>
+    <div class="split">
+      <h3 data-i="pk_h">packages</h3>
+      <div class="body"><p class="lead" data-i="pk_p">Three ways to stay, with the best of the bush already arranged. Every package can be adjusted to your dates and your group.</p></div>
+    </div>
+    <div class="pkgs"><article class="pkg"><p class="small" data-i="pk1_m">3 nights · any villa</p><h3 data-i="pk1_h">Bush escape</h3><ul class="ticks"><li data-i="pk1_i0">Guided sunrise game drive</li><li data-i="pk1_i1">Two safari breakfast baskets</li><li data-i="pk1_i2">Welcome braai pack</li><li data-i="pk1_i3">Sundowner hamper by the river</li></ul><a class="btn ghost" href="mailto:mail@mawivillas.co.za?subject=Bush%20escape%20package"><span data-i="pk_btn">Ask about this package</span></a></article><article class="pkg"><p class="small" data-i="pk2_m">5 nights · Mawi Three</p><h3 data-i="pk2_h">Big five family</h3><ul class="ticks"><li data-i="pk2_i0">Two guided game drives</li><li data-i="pk2_i1">Breakfast baskets for every drive</li><li data-i="pk2_i2">Bicycle hire for the whole stay</li><li data-i="pk2_i3">Groceries before arrival</li></ul><a class="btn ghost" href="mailto:mail@mawivillas.co.za?subject=Big%20five%20family%20package"><span data-i="pk_btn">Ask about this package</span></a></article><article class="pkg"><p class="small" data-i="pk3_m">4 nights · Mawi One</p><h3 data-i="pk3_h">Just the two of us</h3><ul class="ticks"><li data-i="pk3_i0">Guided sunset game drive</li><li data-i="pk3_i1">Sundowner hamper by the river</li><li data-i="pk3_i2">Welcome braai pack</li><li data-i="pk3_i3">Airport transfers</li></ul><a class="btn ghost" href="mailto:mail@mawivillas.co.za?subject=Just%20the%20two%20of%20us%20package"><span data-i="pk_btn">Ask about this package</span></a></article></div>
+  </div>
+</section>
+
 <section class="band dark" id="sec-book" data-pages="book" hidden>
   <div class="wrap">
     <hr class="rule">
     <div class="row">
       <p class="intro mid" data-i="b_h">book your stay</p>
-      <p class="lbl lead"><span>06.</span><span data-i="b_lbl">Book / availability</span></p>
+      <p class="lbl lead"><span>07.</span><span data-i="b_lbl">Book / availability</span></p>
       <p class="lead" style="max-width:34ch" data-i="b_p">Bookings open for stays from December 2027. Check availability here, or write to us with your dates.</p>
     </div>
     <div class="bookgrid">
@@ -789,6 +883,11 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
         </div>
       </div>
     </div>
+    <div class="split" style="border-top-color:var(--line-dark)">
+      <h3 data-i="b_how">how booking works</h3>
+      <div class="body"></div>
+    </div>
+    <ol class="steps"><li><span class="sn">01</span><h4 data-i="b_s1_h">Choose your villa and dates</h4><p data-i="b_s1_p">Check availability here, or send us your dates by email.</p></li><li><span class="sn">02</span><h4 data-i="b_s2_h">We confirm within a working day</h4><p data-i="b_s2_p">You receive a personal confirmation with the total price and what is included.</p></li><li><span class="sn">03</span><h4 data-i="b_s3_h">Add experiences</h4><p data-i="b_s3_p">Game drives, breakfast baskets, bike hire: tell us what you would like and we arrange it.</p></li><li><span class="sn">04</span><h4 data-i="b_s4_h">Arrive and settle in</h4><p data-i="b_s4_p">A few days before you travel, you receive the house guide with directions and your check-in codes.</p></li></ol>
   </div>
 </section>
 
@@ -797,13 +896,15 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
     <hr class="rule">
     <div class="row">
       <p class="intro mid" data-i="h_h">meet your hosts</p>
-      <p class="lbl lead"><span>07.</span><span data-i="h_lbl">Hosts</span></p>
+      <p class="lbl lead"><span>08.</span><span data-i="h_lbl">Hosts</span></p>
       <p class="lead" style="max-width:32ch" data-i="h_p">A Dutch family who made South Africa home.</p>
     </div>
     <div class="hosts">
       <div class="pic p-tentcorner" style="aspect-ratio:4/5" role="img" aria-label="Cane chairs by an open door, bush beyond"></div>
       <div class="stack">
         <p class="lead"><span data-i="h_t1">Willemijn is your host. She answers your messages, takes care of your booking and makes sure everything is ready before you arrive. In Marloth Park our local supervisor looks after the villas and is there when you need someone on site.</span></p>
+        <p data-i="hx_p1">Mawi Villas is the kind of place we would want to stay ourselves: private, comfortable and close to nature, with someone nearby who knows the area and is happy to help.</p>
+        <p data-i="hx_p2">Behind the scenes a small local team looks after the villas: our supervisor, housekeeper and gardener live in and around Marloth Park. We speak English, Dutch and German.</p>
         <p class="sign">Willemijn</p>
       </div>
     </div>
@@ -815,7 +916,7 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
     <hr class="rule">
     <div class="row">
       <p class="intro mid" data-i="rv_h">what guests say</p>
-      <p class="lbl lead"><span>08.</span><span data-i="rv_lbl">Reviews</span></p>
+      <p class="lbl lead"><span>09.</span><span data-i="rv_lbl">Reviews</span></p>
       <p class="lead" style="max-width:32ch" data-i="rv_p">We open in December 2027. Reviews from our first guests will appear here.</p>
     </div>
     <div class="revs">
@@ -831,7 +932,7 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
     <hr class="rule">
     <div class="row">
       <p class="intro mid" data-i="q_h">good to know</p>
-      <p class="lbl lead"><span>09.</span><span>FAQ</span></p>
+      <p class="lbl lead"><span>10.</span><span>FAQ</span></p>
       <p class="lead" style="max-width:32ch" data-i="q_p">The questions guests ask most before a stay in the bush.</p>
     </div>
     <div class="faq">
@@ -842,6 +943,11 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
       <details><summary><span data-i="q5">What should I bring?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a5">Binoculars, a camera with a zoom lens, sun protection and a hat, insect repellent, a torch for the evening and light long sleeves. Linen, towels and a fully equipped kitchen are ready in the villa.</p><p><span class="tag ph" style="margin:0">Check the list</span></p></div></details>
       <details><summary><span data-i="q6">Is it safe with the wild animals around?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a6">Yes, if you respect them. Never feed the animals, keep your distance, drive slowly and give animals right of way. Be extra careful at dusk and at night.</p></div></details>
       <details><summary><span data-i="q7">How far are the gates and the shops?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a7">Crocodile Bridge gate is about 14 km away and Malelane gate about 35 km. Marloth Park has a few shops and restaurants; for bigger supermarkets you drive to Komatipoort or Malelane.</p><p><span class="tag vf" style="margin:0">Verify driving distances</span> <span class="tag ph" style="margin:0">Shop distances</span></p></div></details>
+      <details><summary><span data-i="q8">Can you arrange a guided game drive?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a8">Yes. We work with experienced local field guides for sunrise, sunset and full-day drives in Kruger, with pick-up at your villa. Send us your dates and we book it for you.</p></div></details>
+      <details><summary><span data-i="q9">Can we have breakfast for an early game drive?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a9">Yes. Order a safari breakfast basket and we deliver it to your door before the gates open, with coffee in flasks and food for the road.</p></div></details>
+      <details><summary><span data-i="q10">Do we need a 4x4?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a10">No. The main roads in southern Kruger are tarred and the gravel roads are fine for a normal car. Many roads in Marloth Park are sand, which a regular car handles well if you drive slowly.</p></div></details>
+      <details><summary><span data-i="q11">Can we cycle in Marloth Park?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a11">Yes, cycling is a lovely way to explore. Keep your distance from animals, stay on the roads and avoid cycling at dusk. We can arrange bicycles for your stay.</p></div></details>
+      <details><summary><span data-i="q12">Are the villas suitable for children?</span><i aria-hidden="true"></i></summary><div class="ans"><p data-i="a12">Yes. Mawi Two and Mawi Three are made for families. Children should always be supervised around the pool and the wildlife.</p></div></details>
     </div>
   </div>
 </section>
@@ -851,7 +957,7 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
     <hr class="rule">
     <div class="row">
       <p class="intro mid" data-i="ct_h">questions before you book?</p>
-      <p class="lbl lead"><span>10.</span><span data-i="n_contact">Contact</span></p>
+      <p class="lbl lead"><span>11.</span><span data-i="n_contact">Contact</span></p>
       <p class="lead" style="max-width:32ch" data-i="ct_p">Write to us in English, German or Dutch.</p>
     </div>
     <div class="contact-grid">
@@ -864,6 +970,10 @@ footer{background:var(--sage-deep);color:var(--on-dark);padding-block:clamp(80px
         <div><p class="small">Instagram</p><p class="lead"><a class="ext" href="https://www.instagram.com/mawivillas" target="_blank" rel="noopener">@mawivillas</a></p><span class="tag ph" style="margin:0">Handle</span></div>
         <div><p class="small">TikTok</p><p class="lead"><a class="ext" href="https://www.tiktok.com/@mawivillas" target="_blank" rel="noopener">@mawivillas</a></p><span class="tag ph" style="margin:0">Handle</span></div>
       </div>
+    </div>
+    <div class="split" style="border-top-color:var(--line-dark)">
+      <h3 data-i="cx_h">help planning your trip</h3>
+      <div class="body"><p class="lead" data-i="cx_p">Not sure how many nights to stay, which gate to use or how to combine the bush with Cape Town and the Garden Route? Write to us. We reply within one working day and are happy to help you plan.</p></div>
     </div>
   </div>
 </section>
@@ -1122,6 +1232,7 @@ en:{
 }};
 
 /* ============================================================ */
+Object.assign(T.de,{"vx_h": "so funktionieren unsere villen", "vx_p1": "Jede Villa wird als Ganzes vermietet und nie geteilt. Haus, Garten, Pool und Braai gehören Ihnen für die ganze Dauer Ihres Aufenthalts, mit einem lokalen Team in der Nähe für alles, was Sie brauchen.", "vx_p2": "Alle drei Villen sind nach einem Standard eingerichtet: hochwertige Bettwäsche und Handtücher, eine voll ausgestattete Küche, Glasfaser-WLAN, Solarstrom mit Batteriespeicher und ein digitaler Hausführer mit allem von den Toröffnungszeiten bis zum nächsten Arzt.", "vx_p3": "Mit Familie oder Freunden unterwegs? Buchen Sie zwei oder alle drei Villen und wohnen Sie nebeneinander, jeder mit eigenem Raum und eigenem Pool.", "sx_h": "umsorgt, ganz unauffällig", "sx_p1": "Nach jedem Aufenthalt prüft ein lokaler Verwalter die Villa nach der Reinigung, damit beim Ankommen alles stimmt. Unsere Haushälterin und unser Gärtner halten Häuser und Gärten in Schuss, kleine Reparaturen werden sofort erledigt.", "sx_p2": "Willemijn kümmert sich um Ihre Buchung und Ihre Nachrichten, auf Englisch, Niederländisch oder Deutsch, und ist während Ihres ganzen Aufenthalts erreichbar. Einige Tage vor der Anreise erhalten Sie den Hausführer mit Wegbeschreibung und Check-in-Details.", "mx_h": "leben in einem buschdorf", "mx_p1": "Marloth Park ist ein Wildschutzgebiet, in dem Menschen und Tiere denselben Raum teilen. Giraffen, Zebras, Kudus, Gnus und Warzenschweine laufen zwischen den Häusern umher, und vom Flussufer blicken Sie direkt in den Kruger. Im Park liegt Lionspruit, ein eingezäuntes Wildreservat, das Sie mit dem Auto durchfahren können.", "mx_p2": "Im Park gibt es einige Restaurants, ein kleines Einkaufszentrum und eine Tankstelle; die größeren Supermärkte in Komatipoort und Malelane sind schnell erreicht. Die Abende sind ruhig: keine Straßenlaternen, nur die Geräusche des Buschs und ein Himmel voller Sterne.", "kx1_h": "Lower Sabie", "kx1_p": "Ein Rastlager am Sabie River, etwa 34 km vom Crocodile Bridge Gate. Frühstück auf der Terrasse, während Elefanten zum Trinken kommen.", "kx2_h": "Sunset Dam", "kx2_p": "Direkt bei Lower Sabie: Flusspferde, Krokodile und Wasservögel, am schönsten im Licht des späten Nachmittags.", "kx3_h": "Crocodile Bridge", "kx3_p": "Das Tor, das Marloth Park am nächsten liegt, mit offenen Ebenen im Norden, bekannt für Büffel, Nashörner und Löwen.", "kx4_h": "Berg-en-Dal", "kx4_p": "Hügeliger, felsiger Busch beim Malelane Gate, mit einem Wanderweg entlang des Camp-Zauns und guten Chancen auf Leoparden.", "kx_h": "höhepunkte im süden", "kx_p": "Der südliche Kruger ist der wildreichste Teil des Parks. Dorthin schicken wir unsere Gäste zuerst.", "x1_h": "Geführte Pirschfahrten", "x1_p": "Erleben Sie den Kruger mit einem erfahrenen Guide im offenen Safarifahrzeug. Fahrten bei Sonnenaufgang, Sonnenuntergang oder ganztägig, mit Abholung an Ihrer Villa.", "x2_h": "Safari-Frühstückskorb", "x2_p": "Vor Toröffnung an Ihre Tür geliefert: heißer Kaffee und Tee in Thermoskannen, Rusks, frisches Obst, Joghurt und Sandwiches für unterwegs.", "x3_h": "Fahrradverleih", "x3_p": "Erkunden Sie die Sandwege von Marloth Park in Ihrem eigenen Tempo. Fahrräder und Helme für die ganze Familie, mit einer Karte der schönsten Aussichtspunkte am Fluss.", "x4_h": "Sundowner-Korb", "x4_p": "Kalte Getränke, Snacks und eine Decke, gepackt für den Aussichtspunkt am Fluss, wenn die Sonne über dem Kruger untergeht.", "x5_h": "Willkommens-Braai-Paket", "x5_p": "Feuerholz, Boerewors und Fleisch vom örtlichen Metzger sowie frische Salate, bei Ihrer Ankunft im Kühlschrank.", "x6_h": "Einkäufe vor der Anreise", "x6_p": "Schicken Sie uns Ihre Einkaufsliste, und wir füllen Kühlschrank und Vorratsschrank, damit Ihr Urlaub sofort beginnt.", "x7_h": "Flughafentransfer", "x7_p": "Ein Fahrer holt Sie am Kruger Mpumalanga International Airport ab, bringt Sie zur Villa und am Ende Ihres Aufenthalts wieder zurück.", "x8_h": "Tagesausflüge", "x8_p": "Die Panorama Route und der Blyde River Canyon oder ein Tag jenseits der Grenze, mit einem Guide, der den Weg kennt.", "pk1_i0": "Geführte Pirschfahrt bei Sonnenaufgang", "pk1_i1": "Zwei Safari-Frühstückskörbe", "pk1_i2": "Willkommens-Braai-Paket", "pk1_i3": "Sundowner-Korb am Fluss", "pk1_m": "3 Nächte · jede Villa", "pk1_h": "Busch-Auszeit", "pk_btn": "Nach diesem Paket fragen", "pk2_i0": "Zwei geführte Pirschfahrten", "pk2_i1": "Frühstückskörbe für jede Fahrt", "pk2_i2": "Fahrräder für den ganzen Aufenthalt", "pk2_i3": "Einkäufe vor der Anreise", "pk2_m": "5 Nächte · Mawi Three", "pk2_h": "Big-Five-Familie", "pk3_i0": "Geführte Pirschfahrt bei Sonnenuntergang", "pk3_i1": "Sundowner-Korb am Fluss", "pk3_i2": "Willkommens-Braai-Paket", "pk3_i3": "Flughafentransfer", "pk3_m": "4 Nächte · Mawi One", "pk3_h": "Nur wir zwei", "x_h": "erlebnisse & pakete", "n_exp": "Erlebnisse", "x_p": "Machen Sie mehr aus Ihrem Aufenthalt. Wir organisieren die Extras mit vertrauten lokalen Partnern, Sie müssen nur da sein.", "x_note": "Alle Erlebnisse auf Anfrage, buchbar bei der Reservierung oder während Ihres Aufenthalts. Preise folgen mit Buchungsstart.", "pk_h": "pakete", "pk_p": "Drei Arten zu wohnen, mit dem Besten des Buschs schon organisiert. Jedes Paket lässt sich an Ihre Daten und Ihre Gruppe anpassen.", "b_s1_h": "Villa und Daten wählen", "b_s1_p": "Prüfen Sie hier die Verfügbarkeit oder schicken Sie uns Ihre Daten per E-Mail.", "b_s2_h": "Bestätigung innerhalb eines Werktags", "b_s2_p": "Sie erhalten eine persönliche Bestätigung mit Gesamtpreis und allen Leistungen.", "b_s3_h": "Erlebnisse hinzufügen", "b_s3_p": "Pirschfahrten, Frühstückskörbe, Fahrräder: Sagen Sie uns, was Sie möchten, wir organisieren es.", "b_s4_h": "Ankommen und ankommen lassen", "b_s4_p": "Einige Tage vor der Reise erhalten Sie den Hausführer mit Wegbeschreibung und Ihren Check-in-Codes.", "b_how": "so funktioniert die buchung", "hx_p1": "Mawi Villas ist ein Ort, an dem wir selbst gern wohnen würden: privat, komfortabel und naturnah, mit jemandem in der Nähe, der die Gegend kennt und gern hilft.", "hx_p2": "Hinter den Kulissen kümmert sich ein kleines lokales Team um die Villen: Verwalter, Haushälterin und Gärtner leben in und um Marloth Park. Wir sprechen Englisch, Niederländisch und Deutsch.", "q8": "Können Sie eine geführte Pirschfahrt organisieren?", "a8": "Ja. Wir arbeiten mit erfahrenen lokalen Guides für Fahrten bei Sonnenaufgang, Sonnenuntergang und ganztägig im Kruger, mit Abholung an Ihrer Villa. Schicken Sie uns Ihre Daten, wir buchen für Sie.", "q9": "Gibt es Frühstück für eine frühe Pirschfahrt?", "a9": "Ja. Bestellen Sie einen Safari-Frühstückskorb, und wir liefern ihn vor Toröffnung an Ihre Tür, mit Kaffee in Thermoskannen und Essen für unterwegs.", "q10": "Brauchen wir einen Allradwagen?", "a10": "Nein. Die Hauptstraßen im südlichen Kruger sind asphaltiert, und die Schotterstraßen sind mit einem normalen Auto gut befahrbar. Viele Wege in Marloth Park sind Sandwege, die ein normales Auto bei langsamer Fahrt gut schafft.", "q11": "Kann man in Marloth Park Rad fahren?", "a11": "Ja, Radfahren ist eine schöne Art, die Gegend zu erkunden. Halten Sie Abstand zu den Tieren, bleiben Sie auf den Wegen und fahren Sie nicht in der Dämmerung. Wir können Fahrräder für Sie organisieren.", "q12": "Sind die Villen für Kinder geeignet?", "a12": "Ja. Mawi Two und Mawi Three sind ideal für Familien. Kinder sollten am Pool und bei den Wildtieren immer beaufsichtigt werden.", "cx_h": "hilfe bei der reiseplanung", "cx_p": "Unsicher, wie viele Nächte, welches Tor oder wie Sie den Busch mit Kapstadt und der Garden Route verbinden? Schreiben Sie uns. Wir antworten innerhalb eines Werktags und helfen gern bei der Planung.", "n_exp2": "Erlebnisse", "hx_exp": "guides, fahrräder & frühstück im morgengrauen", "hx_expp": "Geführte Pirschfahrten, ein Frühstückskorb vor Toröffnung an Ihrer Tür, Fahrräder für das Dorf. Wir organisieren die Extras, drei Pakete verbinden sie."});Object.assign(T.nl,{"vx_h": "zo werken onze villa’s", "vx_p1": "Elke villa wordt in zijn geheel verhuurd en nooit gedeeld. Het huis, de tuin, het zwembad en de braai zijn van jullie zolang je verblijft, met een lokaal team dichtbij voor alles wat je nodig hebt.", "vx_p2": "Alle drie de villa’s zijn volgens één standaard ingericht: goed beddengoed en handdoeken, een volledig ingerichte keuken, glasvezel-wifi, zonnepanelen met thuisbatterij en een digitale huisgids met alles van de openingstijden van de gates tot de dichtstbijzijnde dokter.", "vx_p3": "Reis je met familie of vrienden? Boek twee of alle drie de villa’s en verblijf naast elkaar, ieder met je eigen ruimte en je eigen zwembad.", "sx_h": "in stilte goed verzorgd", "sx_p1": "Na elk verblijf controleert een lokale beheerder de villa als hij is schoongemaakt, zodat alles klopt als je binnenkomt. Onze huishoudster en tuinman houden de huizen en tuinen op orde, en kleine reparaties worden direct opgepakt.", "sx_p2": "Willemijn regelt je boeking en je berichten, in het Engels, Nederlands of Duits, en is je hele verblijf bereikbaar. Een paar dagen voor aankomst krijg je de huisgids met de route en je incheckgegevens.", "mx_h": "leven in een bushdorp", "mx_p1": "Marloth Park is een wildreservaat waar mens en dier dezelfde ruimte delen. Giraffen, zebra’s, koedoes, gnoes en wrattenzwijnen lopen tussen de huizen door, en vanaf de rivieroever kijk je zo Kruger in. In het park ligt Lionspruit, een omheind wildreservaat waar je doorheen kunt rijden.", "mx_p2": "In het park zijn een paar restaurants, een klein winkelcentrum en een tankstation, en de grotere supermarkten in Komatipoort en Malelane zijn vlakbij. De avonden zijn stil: geen straatverlichting, alleen de geluiden van de bush en een hemel vol sterren.", "kx1_h": "Lower Sabie", "kx1_p": "Een rest camp aan de Sabie River, zo’n 34 km van de Crocodile Bridge gate. Ontbijt op het terras terwijl olifanten komen drinken.", "kx2_h": "Sunset Dam", "kx2_p": "Vlak bij Lower Sabie: nijlpaarden, krokodillen en watervogels, op hun mooist in het late middaglicht.", "kx3_h": "Crocodile Bridge", "kx3_p": "De gate die het dichtst bij Marloth Park ligt, met open vlaktes in het noorden die bekendstaan om buffels, neushoorns en leeuwen.", "kx4_h": "Berg-en-Dal", "kx4_p": "Heuvelachtige, rotsige bush bij de Malelane gate, met een wandelpad langs het hek van het kamp en een goede kans op luipaarden.", "kx_h": "hoogtepunten in het zuiden", "kx_p": "Zuid-Kruger is het wildrijkste deel van het park. Hier sturen we onze gasten als eerste naartoe.", "x1_h": "Begeleide safariritten", "x1_p": "Ontdek Kruger met een ervaren gids in een open safariwagen. Ritten bij zonsopkomst, zonsondergang of een hele dag, met ophalen bij je villa.", "x2_h": "Safari-ontbijtmand", "x2_p": "Voor de gates opengaan aan je deur bezorgd: hete koffie en thee in thermosflessen, rusks, vers fruit, yoghurt en broodjes voor onderweg.", "x3_h": "Fietsen huren", "x3_p": "Verken de zandwegen van Marloth Park in je eigen tempo. Fietsen en helmen voor het hele gezin, met een kaart van de mooiste uitkijkpunten aan de rivier.", "x4_h": "Sundowner-mand", "x4_p": "Koude drankjes, hapjes en een plaid, ingepakt voor het uitkijkpunt aan de rivier als de zon ondergaat boven Kruger.", "x5_h": "Welkomst-braaipakket", "x5_p": "Brandhout, boerewors en vlees van de lokale slager en verse salades, klaar in de koelkast als je aankomt.", "x6_h": "Boodschappen vooraf", "x6_p": "Stuur ons je boodschappenlijst en wij vullen de koelkast en voorraadkast, zodat je vakantie begint zodra je binnenstapt.", "x7_h": "Vervoer van en naar het vliegveld", "x7_p": "Een chauffeur haalt je op bij Kruger Mpumalanga International Airport, brengt je naar de villa en aan het eind van je verblijf weer terug.", "x8_h": "Dagtrips", "x8_p": "De Panorama Route en Blyde River Canyon, of een dag over de grens, met een gids die de weg weet.", "pk1_i0": "Begeleide safaririt bij zonsopkomst", "pk1_i1": "Twee safari-ontbijtmanden", "pk1_i2": "Welkomst-braaipakket", "pk1_i3": "Sundowner-mand aan de rivier", "pk1_m": "3 nachten · elke villa", "pk1_h": "Bush escape", "pk_btn": "Vraag naar dit arrangement", "pk2_i0": "Twee begeleide safariritten", "pk2_i1": "Ontbijtmanden voor elke rit", "pk2_i2": "Fietsen voor het hele verblijf", "pk2_i3": "Boodschappen vooraf", "pk2_m": "5 nachten · Mawi Three", "pk2_h": "Big five gezin", "pk3_i0": "Begeleide safaririt bij zonsondergang", "pk3_i1": "Sundowner-mand aan de rivier", "pk3_i2": "Welkomst-braaipakket", "pk3_i3": "Vervoer van en naar het vliegveld", "pk3_m": "4 nachten · Mawi One", "pk3_h": "Met z’n tweeën", "x_h": "belevingen & arrangementen", "n_exp": "Belevingen", "x_p": "Haal meer uit je verblijf. Wij regelen de extra’s met vertrouwde lokale partners, jij hoeft er alleen maar te zijn.", "x_note": "Alle belevingen op aanvraag, bij te boeken bij je reservering of tijdens je verblijf. Prijzen volgen zodra boeken mogelijk is.", "pk_h": "arrangementen", "pk_p": "Drie manieren om te verblijven, met het beste van de bush alvast geregeld. Elk arrangement passen we aan op jullie data en gezelschap.", "b_s1_h": "Kies je villa en data", "b_s1_p": "Bekijk hier de beschikbaarheid, of mail ons je data.", "b_s2_h": "Binnen een werkdag bevestigd", "b_s2_p": "Je ontvangt een persoonlijke bevestiging met de totaalprijs en wat er inbegrepen is.", "b_s3_h": "Voeg belevingen toe", "b_s3_p": "Safariritten, ontbijtmanden, fietsen: laat weten wat je wilt en wij regelen het.", "b_s4_h": "Aankomen en landen", "b_s4_p": "Een paar dagen voor vertrek krijg je de huisgids met de route en je inchecktcodes.", "b_how": "zo werkt boeken", "hx_p1": "Mawi Villas is het soort plek waar we zelf graag zouden verblijven: privé, comfortabel en dicht bij de natuur, met iemand in de buurt die de omgeving kent en graag helpt.", "hx_p2": "Achter de schermen zorgt een klein lokaal team voor de villa’s: onze beheerder, huishoudster en tuinman wonen in en rond Marloth Park. We spreken Engels, Nederlands en Duits.", "q8": "Kunnen jullie een begeleide safaririt regelen?", "a8": "Ja. We werken met ervaren lokale gidsen voor ritten bij zonsopkomst, zonsondergang en hele dagen in Kruger, met ophalen bij je villa. Stuur ons je data en wij boeken het voor je.", "q9": "Kunnen we ontbijt krijgen voor een vroege safaririt?", "a9": "Ja. Bestel een safari-ontbijtmand en we bezorgen hem voor de gates opengaan aan je deur, met koffie in thermosflessen en eten voor onderweg.", "q10": "Hebben we een 4x4 nodig?", "a10": "Nee. De hoofdwegen in Zuid-Kruger zijn verhard en de gravelwegen zijn prima te doen met een gewone auto. Veel wegen in Marloth Park zijn zandwegen, die een gewone auto goed aankan als je rustig rijdt.", "q11": "Kunnen we fietsen in Marloth Park?", "a11": "Ja, fietsen is een mooie manier om rond te kijken. Houd afstand van de dieren, blijf op de wegen en fiets niet in de schemering. We kunnen fietsen voor je regelen.", "q12": "Zijn de villa’s geschikt voor kinderen?", "a12": "Ja. Mawi Two en Mawi Three zijn ideaal voor gezinnen. Kinderen moeten bij het zwembad en de wilde dieren altijd onder toezicht zijn.", "cx_h": "hulp bij je reisplan", "cx_p": "Twijfel je hoeveel nachten, welke gate of hoe je de bush combineert met Kaapstad en de Garden Route? Mail ons. We reageren binnen een werkdag en helpen je graag met plannen.", "n_exp2": "Belevingen", "hx_exp": "gidsen, fietsen & ontbijt bij zonsopkomst", "hx_expp": "Begeleide safariritten, een ontbijtmand aan de deur voor de gates opengaan, fietsen om het dorp te verkennen. Wij regelen de extra’s, en drie arrangementen brengen ze samen."});T.en.n_exp='Experiences';
 (function(){
 const $=id=>document.getElementById(id);
 const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
@@ -1161,6 +1272,7 @@ const MENU=[
   {href:'#mawi-three',pic:'veranda',t:{en:'Mawi Three'},d:{en:'For six',de:'Für sechs',nl:'Voor zes'}},
   {href:'#villas',pic:'room',t:{en:'All villas',de:'Alle Villen',nl:'Alle villa\'s'},d:{en:'The three houses side by side',de:'Die drei Häuser im Überblick',nl:'De drie huizen naast elkaar'}},
   {href:'#stay',pic:'bottles',t:{en:'In every villa',de:'In jeder Villa',nl:'In elke villa'},d:{en:'Pool, solar power, braai, self check-in',de:'Pool, Solarstrom, Braai, Self-Check-in',nl:'Zwembad, zonne-energie, braai, zelf inchecken'}},
+  {href:'#experiences',g:'sun',t:{en:'Experiences & packages',de:'Erlebnisse & Pakete',nl:'Belevingen & arrangementen'},d:{en:'Guides, breakfast baskets, bikes',de:'Guides, Frühstückskörbe, Fahrräder',nl:'Gidsen, ontbijtmanden, fietsen'}},
   {href:'#book',pic:'loungers',t:{en:'Rates & booking',de:'Preise & Buchung',nl:'Prijzen & boeken'},d:{en:'Rates, seasons and availability',de:'Preise, Saisons und Verfügbarkeit',nl:'Prijzen, seizoenen en beschikbaarheid'}}
  ]},
  {key:'explore',intro:{en:'A bush village on the Crocodile River, with Kruger across the water.',de:'Ein Buschdorf am Crocodile River, mit dem Kruger auf der anderen Seite.',nl:'Een bushdorp aan de Crocodile River, met Kruger aan de overkant.'},label:{en:'Explore',de:'Entdecken',nl:'Ontdekken'},items:[
@@ -1184,10 +1296,10 @@ const MENU=[
 ];
 function thumb(it){return it.pic?`<span class="th pic p-${it.pic}" aria-hidden="true"></span>`:`<span class="th" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#g-${it.g}"/></svg></span>`}
 function renderMenus(){
-  $('menu').innerHTML=[['villas',t('n_villas')],['stay',t('n_stay')],['marloth','Marloth'],['kruger','Kruger'],['guide',t('n_guide')],['hosts',t('h_lbl')],['reviews',t('m_reviews')],['faq','FAQ'],['contact',t('m_contact')]]
+  $('menu').innerHTML=[['villas',t('n_villas')],['stay',t('n_stay')],['marloth','Marloth'],['kruger','Kruger'],['guide',t('n_guide')],['experiences',t('n_exp')],['hosts',t('h_lbl')],['reviews',t('m_reviews')],['faq','FAQ'],['contact',t('m_contact')]]
     .map(([p,l])=>`<li><a class="mt" href="#${p}">${esc(l)}</a></li>`).join('');
   $('ovList').innerHTML=MENU.map(g=>`<div><h3>${esc(tx(g.label))}</h3>${g.items.map(it=>`<a href="${it.href}">${esc(tx(it.t))}</a>`).join('')}</div>`).join('');
-  $('frow').innerHTML=`<a href="#villas">${t('n_villas')}</a><a href="#stay">${t('n_stay')}</a><a href="#marloth">Marloth</a><a href="#kruger">Kruger</a><a href="#guide">${t('n_guide')}</a><a href="#hosts">${t('h_lbl')}</a><a href="#book">${t('n_book')}</a>`;
+  $('frow').innerHTML=`<a href="#villas">${t('n_villas')}</a><a href="#stay">${t('n_stay')}</a><a href="#marloth">Marloth</a><a href="#kruger">Kruger</a><a href="#guide">${t('n_guide')}</a><a href="#experiences">${t('n_exp')}</a><a href="#hosts">${t('h_lbl')}</a><a href="#book">${t('n_book')}</a>`;
   $('fcols').innerHTML=MENU.map(g=>`<div><h4>${esc(tx(g.label))}</h4><ul>${g.items.map(it=>`<li><a href="${it.href}">${esc(tx(it.t))}</a></li>`).join('')}</ul></div>`).join('');
   bindMenu();
 }
@@ -1318,7 +1430,7 @@ function villaHTML(v){
   </div>`;
 }
 let lastHash=null;
-const PAGES=['villas','stay','marloth','kruger','guide','hosts','reviews','faq','book','contact'];
+const PAGES=['villas','stay','marloth','kruger','guide','experiences','hosts','reviews','faq','book','contact'];
 const SUB={'kruger-gates':['kruger','table.gates'],'guide-kruger':['guide','#sec-guide','kruger'],'guide-jnb':['guide','#sec-guide','jnb'],'guide-cpt':['guide','#sec-guide','cpt'],'guide-route':['guide','#sec-guide','route'],'list':['home','#sec-list']};
 function route(rerender){
   const h=location.hash.slice(1);const v=VILLAS.find(x=>x.id===h);const sub=SUB[h];
