@@ -17,7 +17,7 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Mawi Villas","url":"https://www.mawivillas.co.za/","logo":"https://www.mawivillas.co.za/img/full.png","email":"mail@mawivillas.co.za","address":{"@type":"PostalAddress","addressLocality":"Marloth Park","addressRegion":"Mpumalanga","addressCountry":"ZA"},"sameAs":["https://www.instagram.com/mawivillas","https://www.facebook.com/mawivillas","https://www.tiktok.com/@mawivillas"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter+Tight:wght@300;400;500&display=swap">
 <style>
 /* Layout: three-column grid under hairline rules (intro · numbered label · content), alternating sage, deep-bush and linen bands.
    One colour world by choice: every colour set explicitly, no dark-mode swap. */
@@ -542,6 +542,98 @@ body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opa
 .gallery{grid-auto-flow:dense}
 @media (min-width:701px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery .pic{aspect-ratio:4/5}.gallery .pic.wide{grid-column:span 2;aspect-ratio:auto}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== LUXURY LAYER: refined serif display, quieter rules, more air, slow motion ===== */
+:root{--serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;--ease:cubic-bezier(.22,.61,.12,1)}
+body{font-weight:300;letter-spacing:0;-webkit-font-smoothing:antialiased}
+::selection{background:var(--bush);color:var(--bush-hi)}
+/* type */
+.big,.mid,.feat h3,.pillar h2,.mega .mh b,.rate,.sign,.vnext a,.vhead h1,.gsec>h3,.card h4,.perk h3,.std h3,.compare h3,.ovlist a,.facts b,.facts4 b,.villa h3,.rev .score,.faq summary,.leg b,.overlay ul a{font-family:var(--serif);font-weight:300;letter-spacing:-.005em}
+.big{font-size:clamp(64px,9.2vw,156px);line-height:.92}
+.mid{font-size:clamp(44px,5.4vw,92px);line-height:.95}
+.feat h3,.villa h3{font-size:clamp(44px,4.8vw,80px);line-height:.95}
+.feat h3 .gl,.villa h3 .gl,.vhead h1 .gl{width:.42em;height:.42em;opacity:.75}
+.lead{font-weight:300;font-size:clamp(18px,1.45vw,22px);line-height:1.5;letter-spacing:0}
+.small,.specs dt,.bb-sub,.cap{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.lbl{font-size:11px!important;font-weight:500;letter-spacing:.22em;text-transform:uppercase;gap:14px!important;align-items:baseline}
+.lbl span:first-child{font-family:var(--serif);font-size:20px;letter-spacing:0;text-transform:none;font-style:italic;opacity:.7}
+.intro.lead{font-family:var(--serif);font-size:clamp(24px,2.2vw,34px);line-height:1.2;font-style:italic;font-weight:300}
+.facts b,.facts4 b{font-size:clamp(34px,3.4vw,56px);line-height:1}
+.rate{font-size:clamp(56px,6vw,104px)}
+.std h3{font-size:clamp(26px,2.3vw,36px);display:flex;gap:12px;align-items:baseline}
+.card h4{font-size:clamp(24px,2vw,30px)}
+.faq summary{font-size:clamp(24px,2.2vw,34px);padding:26px 0}
+.sign{font-style:italic;font-size:clamp(34px,3vw,48px)}
+/* rules + rhythm */
+.rule{border-top-width:1px;opacity:.28}
+.band{padding-block:clamp(96px,11vw,176px) clamp(110px,12vw,190px)}
+.row{padding-top:30px;gap:28px 48px}
+.feat{padding-block:clamp(36px,4vw,64px)}
+.feat+.feat,.villa,.specs,.faq details,.faq,.dist li,.incl li,.compare>div,.card{border-color:color-mix(in srgb,currentColor 22%,transparent)!important}
+.villa{border-top-width:1px}
+hr,.ftop,.fbottom{border-color:color-mix(in srgb,currentColor 25%,transparent)!important}
+/* buttons */
+.btn,.btn.sq,.booknow,.gtab,.chip,.copybtn{font-family:var(--sans,"Inter Tight"),sans-serif;font-size:11.5px!important;font-weight:500;letter-spacing:.22em!important;text-transform:uppercase;border-width:1px!important;padding:17px 30px;border-radius:0;transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.gtab{padding:14px 22px}.gtab svg{width:18px;height:18px}
+.chip{padding:9px 16px}
+.more{font-size:11.5px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+/* header */
+.brandband .wrap{padding-block:30px 24px}
+.bb-logo .lg-word{width:clamp(150px,13vw,190px)}
+.bb-sub{margin-top:4px;opacity:.75}
+nav.top>.wrap{padding-block:14px}
+.menu .mt{font-size:11.5px!important;font-weight:500!important;letter-spacing:.22em!important;text-transform:uppercase!important;padding:14px 12px!important}
+.menu .mt.on,.menu>li.open .mt{background-size:calc(100% - 24px) 1px!important}
+.nright .booknow{font-size:11.5px!important;padding:12px 24px!important}
+.sw{border-width:1px!important}
+.sw button{font-size:10.5px!important;letter-spacing:.14em}
+/* hero */
+.hero{padding-block:clamp(56px,8vw,130px) 0}
+.hero h1.big{font-size:clamp(72px,10.5vw,176px)}
+.hero-media{aspect-ratio:16/7.2!important}
+.hero-media .pic{animation:heroKB 22s var(--ease) both!important}
+@keyframes heroKB{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,24,16,0) 55%,rgba(20,24,16,.45));pointer-events:none}
+.cap{z-index:2;left:24px;bottom:20px;opacity:.85}
+.facts{padding-block:34px clamp(100px,11vw,160px)}
+.facts>div{border-top:1px solid color-mix(in srgb,currentColor 25%,transparent);padding-top:22px}
+.facts span{margin-top:12px}
+.badge .ring text{font-size:9.5px;letter-spacing:.32em}
+/* imagery: unified warm grade, slow hover */
+.pic{filter:saturate(.9) contrast(1.03) brightness(.98);transition:filter 1.2s var(--ease),transform 1.6s var(--ease)}
+.feat .pic,.villa .frame,.pl .pic,.gallery,.vgal,.mcard .th,.igstrip a{overflow:hidden}
+.villa .frame .pic,.gallery .pic,.vgal .pic,.igstrip .pic{will-change:transform}
+.feat .pic:hover,.villa .frame:hover .pic,.gallery .pic:hover,.vgal .pic:hover,.pl .pic:hover{filter:saturate(1) contrast(1.03)}
+.gallery,.vgal{gap:16px!important}
+.gallery .pic:hover,.vgal .pic:hover{transform:scale(1.015)}
+.pl{gap:40px clamp(40px,7vw,130px)!important}
+.pl .pic,.pl .glyphpic{aspect-ratio:4/5!important}
+.pillar{padding-block:clamp(80px,10vw,160px)!important}
+.glyphpic svg{width:28%;opacity:.8}
+/* cards, guide, faq */
+.card{gap:14px}
+.card .cimg{background-color:var(--clay-bg)}
+.gsec>h3{font-size:clamp(30px,2.8vw,44px);border-bottom:1px solid color-mix(in srgb,currentColor 22%,transparent);padding-bottom:14px}
+.faq .ans{font-weight:300;line-height:1.65}
+.gates th,.gates td{font-weight:300}
+/* forms */
+.fld label{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.fld input,.fld select{border-bottom-width:1px!important;font-weight:300}
+/* footer */
+footer{padding-block:clamp(80px,9vw,130px) 40px!important}
+.ftop .lg-full{width:140px}
+.frow{font-family:var(--serif);font-size:clamp(22px,1.9vw,28px)!important;font-weight:300}
+.fcols h4{letter-spacing:.22em;font-size:11px}
+.fcols ul{font-weight:300}
+.socials{font-family:var(--serif);font-weight:300}
+.igstrip{gap:10px!important}
+/* overlay menu */
+.ovlist a{font-size:clamp(34px,9vw,52px)!important;line-height:1.12}
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}.hero-media .pic{animation:none!important}}
+.pl.rev{border-top:0!important;padding-top:0!important;min-height:0!important}
 </style>
 </head>
 <body>
@@ -1489,6 +1581,15 @@ if(HERO_VIDEO){const v=$('heroVideo');v.src=HERO_VIDEO;v.hidden=false;v.play&&v.
 
 applyMarks();renderAll();
 if(location.hash){setTimeout(()=>window.scrollTo(0,0),80);addEventListener('load',()=>setTimeout(()=>window.scrollTo(0,0),0))}
+})();
+/* reveal on scroll */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
+  const SEL='.band .row,.pillar .stack,.pillar .pic,.pillar .glyphpic,.feat,.villa,.std>div,.compare>div,.gsec,.faq details,.revs .rev,.hosts>*,.contact-grid>*,.vgal,.vbody,.gallery,.facts>div,.facts4>div,.bookgrid>*';
+  function scan(){document.querySelectorAll(SEL).forEach(el=>{if(el.dataset.rv)return;el.dataset.rv=1;el.classList.add('rv');io.observe(el)})}
+  scan();addEventListener('hashchange',()=>setTimeout(scan,60));
+  new MutationObserver(()=>scan()).observe(document.body,{childList:true,subtree:true});
 })();
 </script>
 </body>
